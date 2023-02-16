@@ -1,5 +1,4 @@
-# semantic-cases
-## Practice the skill of creating semantic markup by layout
+# Practice the skill of creating semantic markup by layout
 ## All mockups and materials are taken from a mini-course from [htmlacademy](https://htmlacademy.ru) [Создание семантической разметки по макету](https://htmlacademy.ru/skills/semantic-markup/payment)
 
 ### Composition of cases:
