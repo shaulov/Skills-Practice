@@ -42,6 +42,56 @@
     <h1 class="visually-hidden">Выбор велосипеда</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтры</h2>
+      <form id="filters-form" action="#" method="GET">
+        <fieldset>
+          <legend>Цена</legend>
+          <label for="price-from" class="visually-hidden">Цена за велосипед, от</label>
+          <input id="price-from" type="text" name="filters-price" placeholder="28000">
+          -
+          <label for="price-to" class="visually-hidden">Цена за велосипед, до</label>
+          <input id="price-to" type="text" name="filters-price" placeholder="180000">
+        </fieldset>
+        <fieldset>
+          <legend>Электровелосипед</legend>
+          <input type="checkbox" name="filters-electric" id="electric-1" value="Да">
+          <label for="electric-1">Да</label>
+          <input type="checkbox" name="filters-electric" id="electric-2" value="Нет">
+          <label for="electric-2">Нет</label>
+        </fieldset>
+        <fieldset>
+          <legend>Материал рамы</legend>
+          <input type="checkbox" name="filters-frame-material" id="frame-1" value="Сталь">
+          <label for="frame-1">Сталь</label>
+          <input type="checkbox" name="filters-frame-material" id="frame-2" value="Карбон">
+          <label for="frame-2">Карбон</label>
+        </fieldset>
+        <fieldset>
+          <legend>Цвет</legend>
+          <input type="checkbox" name="filters-color" id="color-1" value="Чёрный">
+          <label for="color-1">Чёрный</label>
+          <input type="checkbox" name="filters-color" id="color-2" value="Коричневый">
+          <label for="color-2">Коричневый</label>
+          <input type="checkbox" name="filters-color" id="color-3" value="Красный">
+          <label for="color-3">Красный</label>
+          <input type="checkbox" name="filters-color" id="color-4" value="Голубой">
+          <label for="color-4">Голубой</label>
+          <input type="checkbox" name="filters-color" id="color-5" value="Хаки">
+          <label for="color-5">Хаки</label>
+        </fieldset>
+        <fieldset>
+          <legend>Цвет</legend>
+          <input type="checkbox" name="filters-wheels" id="wheels-1" value="20">
+          <label for="wheels-1">20”</label>
+          <input type="checkbox" name="filters-wheels" id="wheels-2" value="22">
+          <label for="wheels-2">22”</label>
+          <input type="checkbox" name="filters-wheels" id="wheels-3" value="24">
+          <label for="wheels-3">24”</label>
+          <input type="checkbox" name="filters-wheels" id="wheels-4" value="26">
+          <label for="wheels-4">26”</label>
+        </fieldset>
+        <button type="submit">Показать</button>
+        <button type="reset">Сбросить фильтры</button>
+      </form>
     </section>
 
     <section class="catalog">
