@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог</title>
 </head>
+
 <body>
   <header class="main-header">
     <nav class="main-header-nav">
-      <a>
-        <img src="img/logo.svg" width="184" height="29" alt="Логотип магазина велосипедов Chopper Bike">
-      </a>
       <ul class="site-navigation">
         <li class="site-navigation-item site-navigation-item-active">
           <a href="#">Велосипеды</a>
@@ -35,7 +34,7 @@
       <a href="#">Личный кабинет пользователя</a>
       <a href="#">Поиск</a>
       <a href="#">Корзина</a>
-    </nav> 
+    </nav>
   </header>
 
   <main>
@@ -79,7 +78,7 @@
           <label for="color-5">Хаки</label>
         </fieldset>
         <fieldset>
-          <legend>Цвет</legend>
+          <legend>Колёса</legend>
           <input type="checkbox" name="filters-wheels" id="wheels-1" value="20">
           <label for="wheels-1">20”</label>
           <input type="checkbox" name="filters-wheels" id="wheels-2" value="22">
@@ -97,24 +96,26 @@
     <section class="catalog">
       <h2 class="visually-hidden">Сортировка карточек</h2>
       <section class="sorting">
-        <select name="sorting" id="sorting">
-          <option value="По популярности">По популярности</option>
-        </select>
-        <fieldset>
-          <legend>Показывать по:</legend>
-          <input id="displayed-number-1" name="displayed-number" type="radio" value="9" checked>
-          <label for="displayed-number-1">9</label>
-          <input id="displayed-number-2" name="displayed-number" type="radio" value="24">
-          <label for="displayed-number-2">24</label>
-          <input id="displayed-number-3" name="displayed-number" type="radio" value="все">
-          <label for="displayed-number-3">все</label>
-        </fieldset>
-        <fieldset>
-          <input id="displayed-type-1" name="displayed-type" type="radio" value="Отобразить в столбик" checked>
-          <label for="displayed-type-1">Отобразить в столбик</label>
-          <input id="displayed-type-2" name="displayed-type" type="radio" value="Отобразить карточками">
-          <label for="displayed-type-2">Отобразить карточками</label>
-        </fieldset>
+        <a href="#">По популярности</a>
+        <ul>
+          <li>
+            <a href="#">9</a>
+          </li>
+          <li>
+            <a href="#">24</a>
+          </li>
+          <li>
+            <a href="#">все</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <button type="button">Отобразить в столбик</button>
+          </li>
+          <li>
+            <button type="button">Отобразить карточками</button>
+          </li>
+        </ul>
       </section>
       <ul class="catalog-list">
         <li class="catalog-list-item">
@@ -123,17 +124,18 @@
           <p>24”, сталь Hi-Ten</p>
           <p>Венгрия</p>
           <p>75 000 ₽</p>
-          <p><s>90 000 ₽</s></p>
+          <span><s>90 000 ₽</s></span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item">
           <h3><a href="#">Schwimm Stingold Oss</a></h3>
-          <img src="img/pocalypse-fekete-13.png" img="224" height="160" alt="Велосипед красного цвета с коричневыми деталями">
+          <img src="img/pocalypse-fekete-13.png" img="224" height="160"
+            alt="Велосипед красного цвета с коричневыми деталями">
           <p>20”+24”, сталь</p>
           <p>США</p>
           <p>34 000 ₽</p>
-          <p><s>40 800 ₽</s></p>
-          <p>-20%</p>
+          <span><s>40 800 ₽</s></span>
+          <span>-20%</span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item catalog-item-new">
@@ -150,13 +152,14 @@
           <p>26”, 500W, 5 скоростей, сталь</p>
           <p>США</p>
           <p>154 000 ₽</p>
-          <p><s>184 800 ₽</s></p>
-          <p>-20%</p>
+          <span><s>184 800 ₽</s></span>
+          <span>-20%</span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item catalog-item-new">
           <h3><a href="#">X-back Rainmobile</a></h3>
-          <img src="img/pocalypse-fekete-28.png" img="224" height="160" alt="Велосипед зелёного цвета с коричневыми седлом и ручками">
+          <img src="img/pocalypse-fekete-28.png" img="224" height="160"
+            alt="Велосипед зелёного цвета с коричневыми седлом и ручками">
           <p>24”, сталь</p>
           <p>Китай</p>
           <p>42 000 ₽</p>
@@ -168,7 +171,7 @@
           <p>24”, сталь Hi-Ten</p>
           <p>Венгрия</p>
           <p>75 000 ₽</p>
-          <p><s>90 000 ₽</s></p>
+          <span><s>90 000 ₽</s></span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item">
@@ -177,7 +180,7 @@
           <p>24”, сталь Hi-Ten</p>
           <p>Венгрия</p>
           <p>75 000 ₽</p>
-          <p><s>90 000 ₽</s></p>
+          <span><s>90 000 ₽</s></span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item">
@@ -186,13 +189,14 @@
           <p>20”+24”, сталь</p>
           <p>США</p>
           <p>34 000 ₽</p>
-          <p><s>47 600 ₽</s></p>
-          <p>-40%</p>
+          <span><s>47 600 ₽</s></span>
+          <span>-40%</span>
           <button type="button">В корзину</button>
         </li>
         <li class="catalog-list-item catalog-item-new">
           <h3><a href="#">Darley Ravidson</a></h3>
-          <img src="img/pocalypse-fekete-69.png" img="224" height="160" alt="Велосипед чёрного цвета с коричневыми седлом и ручками">
+          <img src="img/pocalypse-fekete-69.png" img="224" height="160"
+            alt="Велосипед чёрного цвета с коричневыми седлом и ручками">
           <p>20”, сталь</p>
           <p>Китай</p>
           <p>23 000 ₽</p>
@@ -200,13 +204,15 @@
         </li>
       </ul>
       <nav class="pagination">
-        <a href="#">&#8249;</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        ...
-        <a href="#">26</a>
-        <a href="#">&#8250;</a>
+        <ul class="pagination-list">
+          <li><a href="#">&#8249;</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li>...</li>
+          <li><a href="#">26</a></li>
+          <li><a href="#">&#8250;</a></li>
+        </ul>
       </nav>
     </section>
   </main>
@@ -256,4 +262,5 @@
     <a class="privacy-policy" href="#">Политика конфиденциальности</a>
   </footer>
 </body>
+
 </html>
