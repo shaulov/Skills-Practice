@@ -96,6 +96,118 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Сортировка карточек</h2>
+      <section class="sorting">
+        <select name="sorting" id="sorting">
+          <option value="По популярности">По популярности</option>
+        </select>
+        <fieldset>
+          <legend>Показывать по:</legend>
+          <input id="displayed-number-1" name="displayed-number" type="radio" value="9" checked>
+          <label for="displayed-number-1">9</label>
+          <input id="displayed-number-2" name="displayed-number" type="radio" value="24">
+          <label for="displayed-number-2">24</label>
+          <input id="displayed-number-3" name="displayed-number" type="radio" value="все">
+          <label for="displayed-number-3">все</label>
+        </fieldset>
+        <fieldset>
+          <input id="displayed-type-1" name="displayed-type" type="radio" value="Отобразить в столбик" checked>
+          <label for="displayed-type-1">Отобразить в столбик</label>
+          <input id="displayed-type-2" name="displayed-type" type="radio" value="Отобразить карточками">
+          <label for="displayed-type-2">Отобразить карточками</label>
+        </fieldset>
+      </section>
+      <ul class="catalog-list">
+        <li class="catalog-list-item">
+          <h3><a href="#">Peuzer Kropper Apocalypse</a></h3>
+          <img src="img/pocalypse-fekete-26.png" img="224" height="160" alt="Велосипед тёмно-синего цвета">
+          <p>24”, сталь Hi-Ten</p>
+          <p>Венгрия</p>
+          <p>75 000 ₽</p>
+          <p><s>90 000 ₽</s></p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item">
+          <h3><a href="#">Schwimm Stingold Oss</a></h3>
+          <img src="img/pocalypse-fekete-13.png" img="224" height="160" alt="Велосипед красного цвета с коричневыми деталями">
+          <p>20”+24”, сталь</p>
+          <p>США</p>
+          <p>34 000 ₽</p>
+          <p><s>40 800 ₽</s></p>
+          <p>-20%</p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item catalog-item-new">
+          <h3><a href="#">Darley Ravidson</a></h3>
+          <img src="img/pocalypse-fekete-12.png" img="224" height="160" alt="Велосипед зелёного цвета">
+          <p>20”, сталь</p>
+          <p>Китай</p>
+          <p>23 000 ₽</p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item">
+          <h3><a href="#">Miracle Cyclone Electro</a></h3>
+          <img src="img/pocalypse-fekete-37.png" img="224" height="160" alt="Велосипед красного цвета">
+          <p>26”, 500W, 5 скоростей, сталь</p>
+          <p>США</p>
+          <p>154 000 ₽</p>
+          <p><s>184 800 ₽</s></p>
+          <p>-20%</p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item catalog-item-new">
+          <h3><a href="#">X-back Rainmobile</a></h3>
+          <img src="img/pocalypse-fekete-28.png" img="224" height="160" alt="Велосипед зелёного цвета с коричневыми седлом и ручками">
+          <p>24”, сталь</p>
+          <p>Китай</p>
+          <p>42 000 ₽</p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item">
+          <h3><a href="#">Peuzer Kropper Apocalypse</a></h3>
+          <img src="img/pocalypse-fekete-26.png" img="224" height="160" alt="Велосипед тёмно-синего цвета">
+          <p>24”, сталь Hi-Ten</p>
+          <p>Венгрия</p>
+          <p>75 000 ₽</p>
+          <p><s>90 000 ₽</s></p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item">
+          <h3><a href="#">Peuzer Kropper Apocalypse</a></h3>
+          <img src="img/pocalypse-fekete-26.png" img="224" height="160" alt="Велосипед тёмно-синего цвета">
+          <p>24”, сталь Hi-Ten</p>
+          <p>Венгрия</p>
+          <p>75 000 ₽</p>
+          <p><s>90 000 ₽</s></p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item">
+          <h3><a href="#">Best4You Copter</a></h3>
+          <img src="img/pocalypse-fekete-73.png" img="224" height="160" alt="Велосипед синего цвета">
+          <p>20”+24”, сталь</p>
+          <p>США</p>
+          <p>34 000 ₽</p>
+          <p><s>47 600 ₽</s></p>
+          <p>-40%</p>
+          <button type="button">В корзину</button>
+        </li>
+        <li class="catalog-list-item catalog-item-new">
+          <h3><a href="#">Darley Ravidson</a></h3>
+          <img src="img/pocalypse-fekete-69.png" img="224" height="160" alt="Велосипед чёрного цвета с коричневыми седлом и ручками">
+          <p>20”, сталь</p>
+          <p>Китай</p>
+          <p>23 000 ₽</p>
+          <button type="button">В корзину</button>
+        </li>
+      </ul>
+      <p>
+        <a href="#">&#8249;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        ...
+        <a href="#">26</a>
+        <a href="#">&#8250;</a>
+      </p>
     </section>
   </main>
 
