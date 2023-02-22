@@ -3,3 +3,4 @@
 
 ### Skills:
 1. [Creating semantic layout](semantic-layout-cases/)
+2. [Creating CSS grid layout](css-grid-cases/)
