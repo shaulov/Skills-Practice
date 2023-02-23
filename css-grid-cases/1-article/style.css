@@ -1,0 +1,75 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-width: 1440px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lora", "Palatino Linotype", serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #1f1e1c;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  grid-column-gap: 50px;
+  box-sizing: border-box;
+  min-height: 80px;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  min-height: 80px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: end;
+
+  /* Реализация на гридах не совсем подходит,
+  так как нужно учесть переполнение меню и возможное увеличение количества пунктов,
+  и при этом сделать размер пунктов зависящим от контента, 
+  а грид такое не умеет  */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 117px)); */
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.menu-item {
+  margin-right: 30px;
+}
+
+.menu-item:last-child {
+  margin-right: 0;
+}
+
+.menu-item-link {
+  color: inherit;
+  text-decoration: none;
+}
