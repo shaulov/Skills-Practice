@@ -125,3 +125,18 @@ body {
 .article-text {
   grid-column: span 2;
 }
+
+/* подвал */
+.footer-content {
+  display: grid;
+  grid-template-columns: 225px 1fr;
+  grid-column-gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 16px;
+  justify-self: end;
+}
