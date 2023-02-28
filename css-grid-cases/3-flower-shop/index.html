@@ -12,7 +12,7 @@
 <body>
   <header class="header">
     <nav class="header-nav container">
-      <a href="#">
+      <a class="header-logo" href="#">
         <img src="img/logo.svg" width="177" height="17" alt="Логотип магазина Floral Boutique">
       </a>
       <ul class="menu">
@@ -30,87 +30,107 @@
         </li>
       </ul>
     </nav>
-    <a class="contact-phone" href="tel:+79239995566">+ 7 (923) 999 55 66</a>
-    <a class="cart" href="#">Корзина</a>
+    <a class="header-phone" href="tel:+79239995566">+ 7 (923) 999 55 66</a>
+    <a class="header-cart" href="#">
+      <span class="visually-hidden">Корзина</span>
+    </a>
   </header>
 
   <main class="main container">
-    <div class="title-wrapper">
-      <h1 class="title">Каталог</h1>
+    <div class="main-title-container">
+      <h1 class="main-title">Каталог</h1>
     </div>
-    <section class="filters">
+    <section class="main-filters filters">
       <h2 class="visually-hidden">Фильтры</h2>
       <form action="#" method="GET" class="filters-form">
-        <label for="category-filter" class="visually-hidden">Категория</label>
-        <select name="category" id="category-filter">
-          <option>Категория</option>
+        <label for="category-filter" class="visually-hidden">Сортировать по категориям</label>
+        <select class="filter" name="category" id="category-filter">
+          <option value="category">Категория</option>
         </select>
-        <label for="flowers-filter" class="visually-hidden">Цветы</label>
-        <select name="flowers" id="flowers-filter">
-          <option>Цветы</option>
+        <label for="flower-filter" class="visually-hidden">Сортировать по цветам</label>
+        <select class="filter" name="flower" id="flower-filter">
+          <option value="flower">Цветы</option>
         </select>
-        <label for="price-filter" class="visually-hidden">Цена</label>
-        <select name="price" id="price-filter">
-          <option>Цена</option>
+        <label for="price-filter" class="visually-hidden">Сортировать по цене</label>
+        <select class="filter" name="price" id="price-filter">
+          <option value="price">Цена</option>
         </select>
       </form>
     </section>
-    <section class="catalog">
+    <section class="main-catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog-list">
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Весна»</h3>
-          <img class="card-img" src="img/1.jpg" width="320" height="270" alt="Букет из розовых роз">
-          <p class="card-price">1 500 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Весна»</h3>
+            <img class="card-img" src="img/1.jpg" width="320" height="270" alt="Букет из розовых роз">
+            <p class="card-price">1 500 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Признание»</h3>
-          <img class="card-img" src="img/2.jpg" width="320" height="270" alt="Букет из белых роз">
-          <p class="card-price">3 500 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Признание»</h3>
+            <img class="card-img" src="img/2.jpg" width="320" height="270" alt="Букет из белых роз">
+            <p class="card-price">3 500 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Сюрприз»</h3>
-          <img class="card-img" src="img/3.jpg" width="320" height="270" alt="Букет из персиковых и белых роз">
-          <p class="card-price">2 700 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Сюрприз»</h3>
+            <img class="card-img" src="img/3.jpg" width="320" height="270" alt="Букет из персиковых и белых роз">
+            <p class="card-price">2 700 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Апрель»</h3>
-          <img class="card-img" src="img/4.jpg" width="320" height="270" alt="Букет из весенних цветов">
-          <p class="card-price">2 600 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Апрель»</h3>
+            <img class="card-img" src="img/4.jpg" width="320" height="270" alt="Букет из весенних цветов">
+            <p class="card-price">2 600 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Сухоцветы»</h3>
-          <img class="card-img" src="img/5.jpg" width="320" height="270" alt="Букет из сухоцветов">
-          <p class="card-price">1 800 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Сухоцветы»</h3>
+            <img class="card-img" src="img/5.jpg" width="320" height="270" alt="Букет из сухоцветов">
+            <p class="card-price">1 800 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Нежность»</h3>
-          <img class="card-img" src="img/6.jpg" width="320" height="270" alt="Букет из розовых и белых пионовидных роз">
-          <p class="card-price">2 900 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Нежность»</h3>
+            <img class="card-img" src="img/6.jpg" width="320" height="270" alt="Букет из розовых и белых пионовидных роз">
+            <p class="card-price">2 900 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Яркость»</h3>
-          <img class="card-img" src="img/7.jpg" width="320" height="270" alt="Букет из красных тюльпанов и роз">
-          <p class="card-price">3 300 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Яркость»</h3>
+            <img class="card-img" src="img/7.jpg" width="320" height="270" alt="Букет из красных тюльпанов и роз">
+            <p class="card-price">3 300 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Любовь»</h3>
-          <img class="card-img" src="img/8.jpg" width="320" height="270" alt="Букет из розовых пионов, красных гвоздик и белых роз">
-          <p class="card-price">4 200 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Любовь»</h3>
+            <img class="card-img" src="img/8.jpg" width="320" height="270" alt="Букет из розовых пионов, красных гвоздик и белых роз">
+            <p class="card-price">4 200 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
-        <li class="catalog-list-item card">
-          <h3 class="card-title">Букет «Ласка»</h3>
-          <img class="card-img" src="img/9.jpg" width="320" height="270" alt="Большой букет из белых роз">
-          <p class="card-price">4 800 ₽</p>
-          <a href="#" class="card-button">Заказать</a>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Букет «Ласка»</h3>
+            <img class="card-img" src="img/9.jpg" width="320" height="270" alt="Большой букет из белых роз">
+            <p class="card-price">4 800 ₽</p>
+            <button class="card-button" type="button">Заказать</button>
+          </article>
         </li>
       </ul>
       <div class="button-container">
@@ -121,10 +141,10 @@
 
   <footer class="footer">
     <div class="footer-container container">
-      <a href="#">
+      <a class="footer-logo" href="#">
         <img src="img/logo.svg" width="177" height="17" alt="Логотип магазина Floral Boutique">
       </a>
-      <ul class="menu">
+      <ul class="footer-menu menu">
         <li class="menu-item">
           <a href="#" class="menu-item-link">Каталог</a>
         </li>
@@ -138,15 +158,21 @@
           <a href="#" class="menu-item-link">Контакты</a>
         </li>
       </ul>
-      <ul class="socials">
-        <li class="socials-item">
-          <a href="#" class="socials-item-link">Пинстаграм</a>
+      <ul class="footer-social-links social-links">
+        <li class="social-links-item social-links-item-instagram">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинстаграм</span>
+          </a>
         </li>
-        <li class="socials-item">
-          <a href="#" class="socials-item-link">Кейсбук</a>
+        <li class="social-links-item social-links-item-facebook">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Кейсбук</span>
+          </a>
         </li>
-        <li class="socials-item">
-          <a href="#" class="socials-item-link">Пинтерест</a>
+        <li class="social-links-item social-links-item-pinterest">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинтерест</span>
+          </a>
         </li>
       </ul>
     </div>
