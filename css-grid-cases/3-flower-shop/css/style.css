@@ -104,7 +104,7 @@ body {
 }
 
 .main-title {
-  margin-left: 110px;
+  margin: 0 0 0 110px;
   color: #59313B;
   font-family: "Merriweather", "Georgia", serif;
   font-size: 62px;
