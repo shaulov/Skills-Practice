@@ -92,6 +92,127 @@ body {
   grid-row-start: main;
 }
 
+.main-title-container {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 50px;
+  background-image: url('../img/back.jpg');
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-title {
+  margin-left: 110px;
+  color: #59313B;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 350px;
+}
+
+.filters-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  margin-bottom: 50px;
+}
+
+.filter {
+  height: 59px;
+  padding-left: 18px;
+  border: 1px solid #40393b;
+  background-color: transparent;
+  color: #40393b;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filter:not([multiple]) {
+  background-repeat: no-repeat;
+  background-position: calc(100% - 25px) 26px;
+  background-size: 16px 8px;
+  background-image: url('../img/down.svg');;
+}
+
+.main-catalog {
+  margin-bottom: 80px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  list-style: none;
+  margin: 0 0 70px 0;
+  padding: 0;
+}
+
+.main-button-more {
+  display: grid;
+}
+
+.button-more {
+  margin: 0 auto;
+  padding: 23px 20px;
+  width: 380px;
+  border: 1px solid #40393b;
+  background-color: inherit;
+  color: #40393b;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+} 
+
+.card {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+  background-color: #FAFAFA;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
+  grid-row-start: 1;
+}
+
+.card-title {
+  margin: 15px 0 5px 0;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  color: #40393B;
+}
+
+.card-price {
+  margin: 0 0 20px;
+  color: #40393B;
+  font-family: inherit;
+}
+
+.card-button {
+  margin: 0;
+  padding: 12px 20px;
+  width: 174px;
+  border: none;
+  background-color: #59313B;
+  color: #FAFAFA;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
 .footer {
   grid-row-start: footer;
   background-color: #DED9D5;
