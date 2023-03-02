@@ -13,6 +13,22 @@ body {
   background-color: #F7F6F5;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
+}
+
 .header {
   grid-row-start: header;
 }
