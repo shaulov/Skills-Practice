@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  grid-template-rows: [header] auto [main] 1fr [footer] auto;
+  min-width: 1440px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  font-style: normal;
+  font-weight: 400;
+  color: #211E1D;
+  background-color: #F7F6F5;
+}
+
+.header {
+  grid-row-start: header;
+}
+
+.main {
+  grid-row-start: main;
+}
+
+.footer {
+  grid-row-start: footer;
+}
