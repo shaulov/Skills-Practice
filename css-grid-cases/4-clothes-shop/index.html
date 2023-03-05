@@ -50,6 +50,24 @@
     <h1 class="main-title">Женская одежда</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтры и сортировка</h2>
+      <form id="filters-form" action="#" method="GET">
+        <label for="category-filter">Категория</label>
+        <select class="filter" name="category" id="category-filter">
+          <option value="all">Все</option>
+        </select>
+        <label for="brand-filter">Бренд</label>
+        <select class="filter" name="brand" id="brand-filter">
+          <option value="all">Все</option>
+        </select>
+        <label for="collection-filter">Коллекция</label>
+        <select class="filter" name="collection" id="collection-filter">
+          <option value="all">Все</option>
+        </select>
+        <label for="sorting">Сортировать по:</label>
+        <select class="sorting" name="sorting" id="sorting">
+          <option value="popular">Популярности</option>
+        </select>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог одежды</h2>
