@@ -17,34 +17,40 @@
       <a>
         <img src="img/logo.svg" width="90" height="36" alt="Логотип магазина женской одежды Furly">
       </a>
-      <ul class="menu">
-        <li class="menu-item">
-          <a href="#" class="menu-item-link">Новинки</a>
+      <ul class="site-menu">
+        <li class="site-menu-item">
+          <a href="#">Новинки</a>
         </li>
-        <li class="menu-item">
-          <a href="#" class="menu-item-link">Бестселлеры</a>
+        <li class="site-menu-item">
+          <a href="#">Бестселлеры</a>
         </li>
-        <li class="menu-item">
-          <a href="#" class="menu-item-link">Одежда</a>
+        <li class="site-menu-item">
+          <a href="#">Одежда</a>
         </li>
-        <li class="menu-item">
-          <a href="#" class="menu-item-link">Обувь</a>
+        <li class="site-menu-item">
+          <a href="#">Обувь</a>
         </li>
-        <li class="menu-item">
-          <a href="#" class="menu-item-link">Аксессуары</a>
+        <li class="site-menu-item">
+          <a href="#">Аксессуары</a>
         </li>
       </ul>
-      <div class="header-icons">
-        <a href="#" class="header-icons-element icons-entrance">
-          <span class="visually-hidden">Вход в личный кабинет</span>
-        </a>
-        <a href="#" class="header-icons-element icons-favorite">
-          <span class="visually-hidden">Избранные товары</span>
-        </a>
-        <a href="#" class="header-icons-element icons-basket">
-          <span class="visually-hidden">Перейти в корзиру</span>
-        </a>
-      </div>
+      <ul class="user-menu">
+        <li class="user-menu-item">
+          <a href="#" class="icons-entrance">
+            <span class="visually-hidden">Вход в личный кабинет</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a href="#" class="icons-favorite">
+            <span class="visually-hidden">Избранные товары</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a href="#" class="icons-basket">
+            <span class="visually-hidden">Перейти в корзиру</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -52,31 +58,23 @@
     <h1 class="main-title">Женская одежда</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтры и сортировка</h2>
-      <form class="filters-form" id="filters-form" action="#" method="GET">
-        <label>
-          <p class="filter-name">Категория</p>
-          <select class="filter" name="category" id="category-filter">
-            <option value="all">Все</option>
-          </select>
-        </label>
-        <label>
-          <p class="filter-name">Бренд</p>
-          <select class="filter" name="brand" id="brand-filter">
-            <option value="all">Все</option>
-          </select>
-        </label>
-        <label>
-          <p class="filter-name">Коллекция</p>
-          <select class="filter" name="collection" id="collection-filter">
-            <option value="all">Все</option>
-          </select>
-        </label>
-        <label>
-          <p class="filter-name">Сортировать по:</p>
-          <select class="filter" name="sorting" id="sorting">
-            <option value="popular">Популярности</option>
-          </select>
-        </label>
+      <form class="filters-form" action="#" method="GET">
+        <label for="category">Категория</label>
+        <select id="category" class="filter">
+          <option value="">Все</option>
+        </select>
+        <label for="brand">Бренд</label>
+        <select class="filter" id="brand" name="brand">
+          <option value="">Все</option>
+        </select>
+        <label for="collection">Коллекция</label>
+        <select class="filter" id="collection" name="collection">
+          <option value="">Все</option>
+        </select>
+        <label for="sort">Сортировать по:</label>
+        <select class="filter" id="sort" name="sort">
+          <option value="popular">Популярности</option>
+        </select>
       </form>
     </section>
     <section class="catalog">
@@ -219,46 +217,14 @@
 
   <footer class="footer">
     <div class="footer-content container">
-      <div>
-        <a>
-          <img src="img/logo.svg" width="90" height="36" alt="Логотип магазина женской одежды Furly">
-        </a>
-        <p class="footer-copyright">Furly © 2021 Все права защищены</p>
-        <a class="privacy-policy" href="#">Политика конфиденциальности</a>
-      </div>
-      <ul class="footer-contacts contacts">
-        <li class="contacts-item">
-          <a href="tel:5349585555">534-958-5555</a>
-        </li>
-        <li class="contacts-item">
-          <a href="mailto:info@furly.com">info@furly.com</a>
-        </li>
-        <li class="contacts-item">
-          <ul class="footer-social-links social-links">
-            <li class="social-links-item social-links-item-facebook">
-              <a href="#" class="socials-item-link">
-                <span class="visually-hidden">Кейсбук</span>
-              </a>
-            </li>
-            <li class="social-links-item social-links-item-twitter">
-              <a href="#" class="socials-item-link">
-                <span class="visually-hidden">Твиттер</span>
-              </a>
-            </li>
-            <li class="social-links-item social-links-item-instagram">
-              <a href="#" class="socials-item-link">
-                <span class="visually-hidden">Пинстаграм</span>
-              </a>
-            </li>
-            <li class="social-links-item social-links-item-pinterest">
-              <a href="#" class="socials-item-link">
-                <span class="visually-hidden">Пинтерест</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="footer-menu">
+      <a>
+        <img src="img/logo.svg" width="90" height="36" alt="Логотип магазина женской одежды Furly">
+      </a>
+      <p class="footer-copyright">Furly © 2021 Все права защищены</p>
+      <a class="privacy-policy" href="#">Политика конфиденциальности</a>
+      <a class="footer-phone" href="tel:5349585555">534-958-5555</a>
+      <a class="footer-email" href="mailto:info@furly.com">info@furly.com</a>
+      <ul class="footer-menu menu">
         <li class="footer-menu-item">
           <a href="#" class="footer-menu-item-link">Оплата и доставка</a>
         </li>
@@ -269,16 +235,36 @@
           <a href="#" class="footer-menu-item-link">Отследить заказ</a>
         </li>
       </ul>
-      <article class="subscribe-form">
-        <h3 class="subscribe-form-title">Подпишитесь на нашу рассылку</h3>
-        <form id="subscribe-form" action="#" method="POST" class="footer-form">
-          <label for="subscribe-email" class="visually-hidden">E-mail</label>
-          <input id="subscribe-email" name="email" type="email" class="footer-form-email" placeholder="example@email.com">
-          <button type="submit" class="footer-form-button icons-rigth-arrow">
-            <span class="visually-hidden">Подписаться</span>
-          </button>
-        </form>
-      </article>
+      <ul class="footer-social-links social-links">
+        <li class="social-links-item social-links-item-facebook">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Кейсбук</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-twitter">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-instagram">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинстаграм</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-pinterest">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинтерест</span>
+          </a>
+        </li>
+      </ul>
+      <form class="subscribe-form" action="#" method="POST">
+        <label class="subscribe-form-label" for="subscribe-form-email">Подпишитесь на нашу рассылку</label>
+        <input class="subscribe-form-field" id="subscribe-form-email" name="subscribe-form-email" type="email"
+          placeholder="example@email.com">
+        <button class="subscribe-form-button icons-rigth-arrow" type="submit">
+          <span class="visually-hidden">Подписаться</span>
+        </button>
+      </form>
     </div>
   </footer>
 </body>
