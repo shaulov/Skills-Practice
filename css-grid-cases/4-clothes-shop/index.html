@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Главная страница магазина женской одежды Furly</title>
 </head>
+
 <body>
   <header class="header">
     <nav class="header-nav container">
@@ -50,23 +52,31 @@
     <h1 class="main-title">Женская одежда</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтры и сортировка</h2>
-      <form id="filters-form" action="#" method="GET">
-        <label for="category-filter">Категория</label>
-        <select class="filter" name="category" id="category-filter">
-          <option value="all">Все</option>
-        </select>
-        <label for="brand-filter">Бренд</label>
-        <select class="filter" name="brand" id="brand-filter">
-          <option value="all">Все</option>
-        </select>
-        <label for="collection-filter">Коллекция</label>
-        <select class="filter" name="collection" id="collection-filter">
-          <option value="all">Все</option>
-        </select>
-        <label for="sorting">Сортировать по:</label>
-        <select class="sorting" name="sorting" id="sorting">
-          <option value="popular">Популярности</option>
-        </select>
+      <form class="filters-form" id="filters-form" action="#" method="GET">
+        <label>
+          <p class="filter-name">Категория</p>
+          <select class="filter" name="category" id="category-filter">
+            <option value="all">Все</option>
+          </select>
+        </label>
+        <label>
+          <p class="filter-name">Бренд</p>
+          <select class="filter" name="brand" id="brand-filter">
+            <option value="all">Все</option>
+          </select>
+        </label>
+        <label>
+          <p class="filter-name">Коллекция</p>
+          <select class="filter" name="collection" id="collection-filter">
+            <option value="all">Все</option>
+          </select>
+        </label>
+        <label>
+          <p class="filter-name">Сортировать по:</p>
+          <select class="filter" name="sorting" id="sorting">
+            <option value="popular">Популярности</option>
+          </select>
+        </label>
       </form>
     </section>
     <section class="catalog">
@@ -75,21 +85,24 @@
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Платье Spring</h3>
-            <img class="card-img" src="img/1.jpg" width="320" height="408" alt="Девушка в белом платье в чёрный горошек позирует сидя">
+            <img class="card-img" src="img/1.jpg" width="320" height="408"
+              alt="Девушка в белом платье в чёрный горошек позирует сидя">
             <p class="card-price">4 500 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Костюм Beige</h3>
-            <img class="card-img" src="img/2.jpg" width="320" height="408" alt="Девушка в бежевом костюме позирует стоя">
+            <img class="card-img" src="img/2.jpg" width="320" height="408"
+              alt="Девушка в бежевом костюме позирует стоя">
             <p class="card-price">8 500 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Джинсовое платье Pink</h3>
-            <img class="card-img" src="img/3.jpg" width="320" height="408" alt="Девушка в коричневом джинсовом платье позирует сидя">
+            <img class="card-img" src="img/3.jpg" width="320" height="408"
+              alt="Девушка в коричневом джинсовом платье позирует сидя">
             <p class="card-price">6 500 ₽</p>
           </article>
         </li>
@@ -103,35 +116,40 @@
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Худи Sand</h3>
-            <img class="card-img" src="img/5.jpg" width="320" height="408" alt="Девушка в песочном худи позирует на фоне песка">
+            <img class="card-img" src="img/5.jpg" width="320" height="408"
+              alt="Девушка в песочном худи позирует на фоне песка">
             <p class="card-price">3 500 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Платье-комбинация Black</h3>
-            <img class="card-img" src="img/6.jpg" width="320" height="408" alt="Девушка в чёрном платье позирует с кувалдой в руках на фоне песчаных гор">
+            <img class="card-img" src="img/6.jpg" width="320" height="408"
+              alt="Девушка в чёрном платье позирует с кувалдой в руках на фоне песчаных гор">
             <p class="card-price">6 500 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Тренч Sad Autumn</h3>
-            <img class="card-img" src="img/7.jpg" width="320" height="408" alt="Девушка в сером тренче позирует на фоне пустыни">
+            <img class="card-img" src="img/7.jpg" width="320" height="408"
+              alt="Девушка в сером тренче позирует на фоне пустыни">
             <p class="card-price">12 000 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Костюм Grey</h3>
-            <img class="card-img" src="img/8.jpg" width="320" height="408" alt="Девушка в сером костюме позирует на фоне песчаных гор">
+            <img class="card-img" src="img/8.jpg" width="320" height="408"
+              alt="Девушка в сером костюме позирует на фоне песчаных гор">
             <p class="card-price">8 500 ₽</p>
           </article>
         </li>
         <li class="catalog-list-item">
           <article class="card">
             <h3 class="card-title">Платье Ornament</h3>
-            <img class="card-img" src="img/9.jpg" width="320" height="408" alt="Девушка в белом платье с узором чёрного цвета костюме сидит на заднем сиденье кабриолета">
+            <img class="card-img" src="img/9.jpg" width="320" height="408"
+              alt="Девушка в белом платье с узором чёрного цвета костюме сидит на заднем сиденье кабриолета">
             <p class="card-price">4 500 ₽</p>
           </article>
         </li>
@@ -228,4 +246,5 @@
     </div>
   </footer>
 </body>
+
 </html>
