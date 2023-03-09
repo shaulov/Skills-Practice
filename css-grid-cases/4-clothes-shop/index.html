@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,25 +10,263 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Главная страница магазина женской одежды Furly</title>
 </head>
+
 <body>
   <header class="header">
     <nav class="header-nav container">
-
+      <a>
+        <img src="img/logo.svg" width="90" height="36" alt="Логотип магазина женской одежды Furly">
+      </a>
+      <ul class="site-menu">
+        <li class="site-menu-item">
+          <a href="#">Новинки</a>
+        </li>
+        <li class="site-menu-item">
+          <a href="#">Бестселлеры</a>
+        </li>
+        <li class="site-menu-item">
+          <a href="#">Одежда</a>
+        </li>
+        <li class="site-menu-item">
+          <a href="#">Обувь</a>
+        </li>
+        <li class="site-menu-item">
+          <a href="#">Аксессуары</a>
+        </li>
+      </ul>
+      <ul class="user-menu">
+        <li class="user-menu-item">
+          <a href="#" class="icons-entrance">
+            <span class="visually-hidden">Вход в личный кабинет</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a href="#" class="icons-favorite">
+            <span class="visually-hidden">Избранные товары</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a href="#" class="icons-basket">
+            <span class="visually-hidden">Перейти в корзиру</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main container">
     <h1 class="main-title">Женская одежда</h1>
     <section class="filters">
       <h2 class="visually-hidden">Фильтры и сортировка</h2>
+      <form class="filters-form" action="#" method="GET">
+        <label for="category">Категория</label>
+        <select id="category" class="filter">
+          <option value="">Все</option>
+        </select>
+        <label for="brand">Бренд</label>
+        <select class="filter" id="brand" name="brand">
+          <option value="">Все</option>
+        </select>
+        <label for="collection">Коллекция</label>
+        <select class="filter" id="collection" name="collection">
+          <option value="">Все</option>
+        </select>
+        <label for="sort">Сортировать по:</label>
+        <select class="filter" id="sort" name="sort">
+          <option value="popular">Популярности</option>
+        </select>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Каталог одежды</h2>
+      <ul class="catalog-list">
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Платье Spring</h3>
+            <img class="card-img" src="img/1.jpg" width="320" height="408"
+              alt="Девушка в белом платье в чёрный горошек позирует сидя">
+            <p class="card-price">4 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Костюм Beige</h3>
+            <img class="card-img" src="img/2.jpg" width="320" height="408"
+              alt="Девушка в бежевом костюме позирует стоя">
+            <p class="card-price">8 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Джинсовое платье Pink</h3>
+            <img class="card-img" src="img/3.jpg" width="320" height="408"
+              alt="Девушка в коричневом джинсовом платье позирует сидя">
+            <p class="card-price">6 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Худи Beige</h3>
+            <img class="card-img" src="img/4.jpg" width="320" height="408" alt="Девушка в бежевом худи позирует стоя">
+            <p class="card-price">3 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Худи Sand</h3>
+            <img class="card-img" src="img/5.jpg" width="320" height="408"
+              alt="Девушка в песочном худи позирует на фоне песка">
+            <p class="card-price">3 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Платье-комбинация Black</h3>
+            <img class="card-img" src="img/6.jpg" width="320" height="408"
+              alt="Девушка в чёрном платье позирует с кувалдой в руках на фоне песчаных гор">
+            <p class="card-price">6 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Тренч Sad Autumn</h3>
+            <img class="card-img" src="img/7.jpg" width="320" height="408"
+              alt="Девушка в сером тренче позирует на фоне пустыни">
+            <p class="card-price">12 000 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Костюм Grey</h3>
+            <img class="card-img" src="img/8.jpg" width="320" height="408"
+              alt="Девушка в сером костюме позирует на фоне песчаных гор">
+            <p class="card-price">8 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Платье Ornament</h3>
+            <img class="card-img" src="img/9.jpg" width="320" height="408"
+              alt="Девушка в белом платье с узором чёрного цвета костюме сидит на заднем сиденье кабриолета">
+            <p class="card-price">4 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Пальто Thunder</h3>
+            <img class="card-img" src="img/10.jpg" width="320" height="408" alt="Девушка в сером пальто">
+            <p class="card-price">10 000 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Пиджак Duon</h3>
+            <img class="card-img" src="img/11.jpg" width="320" height="408" alt="Девушка в бежевом пиджаке">
+            <p class="card-price">7 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+        <li class="catalog-list-item">
+          <article class="card">
+            <h3 class="card-title">Пальто Flax</h3>
+            <img class="card-img" src="img/12.jpg" width="320" height="408" alt="Девушка в бежевом пальто">
+            <p class="card-price">13 500 ₽</p>
+            <button type="button" class="card-button icons-favorite">
+              <span class="visually-hidden">Добавить в избранные товары</span>
+            </button>
+          </article>
+        </li>
+      </ul>
+      <div class="main-button-more">
+        <button class="button-more" type="button">Загрузить еще</button>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-content container"></div>
+    <div class="footer-content container">
+      <a>
+        <img src="img/logo.svg" width="90" height="36" alt="Логотип магазина женской одежды Furly">
+      </a>
+      <p class="footer-copyright">Furly © 2021 Все права защищены</p>
+      <a class="privacy-policy" href="#">Политика конфиденциальности</a>
+      <a class="footer-phone" href="tel:5349585555">534-958-5555</a>
+      <a class="footer-email" href="mailto:info@furly.com">info@furly.com</a>
+      <ul class="footer-menu menu">
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-item-link">Оплата и доставка</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-item-link">Возврат</a>
+        </li>
+        <li class="footer-menu-item">
+          <a href="#" class="footer-menu-item-link">Отследить заказ</a>
+        </li>
+      </ul>
+      <ul class="footer-social-links social-links">
+        <li class="social-links-item social-links-item-facebook">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Кейсбук</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-twitter">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Твиттер</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-instagram">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинстаграм</span>
+          </a>
+        </li>
+        <li class="social-links-item social-links-item-pinterest">
+          <a href="#" class="socials-item-link">
+            <span class="visually-hidden">Пинтерест</span>
+          </a>
+        </li>
+      </ul>
+      <form class="subscribe-form" action="#" method="POST">
+        <label class="subscribe-form-label" for="subscribe-form-email">Подпишитесь на нашу рассылку</label>
+        <input class="subscribe-form-field" id="subscribe-form-email" name="subscribe-form-email" type="email"
+          placeholder="example@email.com">
+        <button class="subscribe-form-button icons-rigth-arrow" type="submit">
+          <span class="visually-hidden">Подписаться</span>
+        </button>
+      </form>
+    </div>
   </footer>
 </body>
+
 </html>
