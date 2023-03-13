@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  min-width: 1440px;
+  min-height: 100vh;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3C425F;;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 280px 1fr;
+  grid-template-areas: 
+    "nav header"
+    "nav main"
+    "footer footer";
+}
+
+.page-nav {
+  grid-area: nav;
+}
+
+.page-header {
+  grid-area: header;
+  min-height: 80px;
+}
+
+.page-main {
+  grid-area: main;
+}
+
+.page-footer {
+  grid-area: footer;
+  min-height: 60px;
+}
