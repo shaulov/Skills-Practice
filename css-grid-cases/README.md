@@ -6,4 +6,4 @@
 02. Article on the travel blog (easy level) \[[link](02-travel-blog/)\]
 03. Catalog of the flowers shop (easy level) \[[link](03-flower-shop/)\]
 04. Main page of the clothes shop (easy level) \[[link](04-clothes-shop/)\]
-05. Language school student's personal account (menium level) \[[link](05-language-school/)\]
+05. Language school student's personal account (middle level) \[[link](05-language-school/)\]
