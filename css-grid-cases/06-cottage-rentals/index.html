@@ -173,7 +173,32 @@
       </article>
     </section>
     <section class="feedback">
-      <h2>Оставить заявку</h2>
+      <header>
+        <h2>Оставить заявку</h2>
+        <h3>Мы свяжемся с вами</h3>
+      </header>
+      <form class="feedback-form" method="get" action="#">
+        <label for="titles">Обращение</label>
+        <select class="field" name="titles" id="titles">
+          <option value="Mrs">Мистер</option>
+          <option value="Mr">Миссис</option>
+          <option value="Ms">Мисс</option>
+        </select>
+        <label for="name">Имя</label>
+        <input class="field" type="text" name="name" id="name">
+        <label for="surname">Фамилия</label>
+        <input class="field" type="text" name="surname" id="surname">
+        <label for="email">E-mail</label>
+        <input class="field" type="email" name="email" id="email">
+        <label for="tel">Телефон</label>
+        <input class="field" type="tel" name="tel" id="tel">
+        <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
+        <label for="agreement" class="text-label">Согласие на обработку персональных данных</label>
+        <input class="visually-hidden" type="checkbox" name="subscribe" id="subscribe" checked>
+        <label for="subscribe" class="text-label">Подписка на рассылку</label>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <img class="feedback-img" src="img/image-114.jpg" width="708" height="737" alt="Лодка на озере">
     </section>
   </main>
   <footer class="footer"></footer>
