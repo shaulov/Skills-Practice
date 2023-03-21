@@ -21,6 +21,12 @@ body {
   overflow: hidden;
 }
 
+.container {
+  width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .page {
   display: grid;
   grid-template-rows: auto 1fr auto;
