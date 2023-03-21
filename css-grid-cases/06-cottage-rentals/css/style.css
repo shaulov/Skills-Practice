@@ -27,6 +27,14 @@ body {
   padding: 0 30px;
 }
 
+.page-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #06A9B3;
+  text-decoration: none;
+}
+
 .button {
   display: inline-block;
   padding: 16px 32px;
@@ -73,30 +81,16 @@ body {
 
 .menu-item {
   margin-right: 64px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #06A9B3;
 }
 
 .menu-item:last-child {
   margin-right: 0;
 }
 
-.menu-item-link {
-  color: inherit;
-  text-decoration: none;
-}
-
 .user-nav {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-}
-
-.user-nav-link {
-  color: #06A9B3;
-  text-decoration: none;
 }
 
 .logo {
