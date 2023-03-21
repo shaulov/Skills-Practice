@@ -20,3 +20,27 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #F2F8FB;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #F2F8FB;
+}
