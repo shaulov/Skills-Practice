@@ -65,7 +65,7 @@ body {
 
 .header-nav {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: 1fr auto 1fr;
   column-gap: 64px;
   align-items: center;
   min-height: 80px;
@@ -87,19 +87,26 @@ body {
   margin-right: 0;
 }
 
+.logo {
+  justify-self: center;
+}
+
+.user-menu-container {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
 .user-nav {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 }
 
-.logo {
-  justify-self: center;
-}
-
 .search {
   width: 16px;
   height: 16px;
+  margin-right: 54px;
   padding: 0 10px;
   background-image: url('../img/search.svg');
   background-repeat: no-repeat;
@@ -219,6 +226,7 @@ body {
   background-position: center;
   background-size: 30px 16px;
   border: none;
+  cursor: pointer;
 }
 
 .slider-button-prev {
