@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: #333333;
+  counter-reset: section-counter;
 }
 
 .visually-hidden {
@@ -46,6 +47,45 @@ body {
   background-color: #06A9B3;
   text-decoration: none;
   border: none;
+}
+
+.section h2 {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 115px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #06A9B3;
+}
+
+.section h2::before {
+  counter-increment: section-counter;
+  content: "0" counter(section-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #06A9B3;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  width: 81px;
+  height: 1px;
+  left: 25px;
+  top: 9px;
+  border-top: 1px solid #06A9B3;
+}
+
+.section h3 {
+  margin: 60px 0 0 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
 }
 
 .page {
@@ -245,6 +285,96 @@ body {
   line-height: 48px;
   color: #FFFFFF;
   text-align: right;
+}
+
+.place {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+
+.place header {
+  grid-column: 5 / 9;
+  margin-bottom: 24px;
+}
+
+.place::before {
+  content: "01";
+  position: absolute;
+  left: 145px;
+  top: 0;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 65px;
+  color: #EAF2F6;
+}
+
+.place::after {
+  content: "Место";
+  position: absolute;
+  left: 145px;
+  top: 60px;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 65px;
+  color: #EAF2F6;
+  writing-mode: vertical-lr;
+  transform: scale(-1, -1) translateY(-40px);
+}
+
+.place-content {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+.place-content > * {
+  grid-column: 5 / 9;
+}
+
+.place-content p {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.place img {
+  margin-bottom: 24px;
+}
+
+.article-aside-right {
+  grid-column: 10 / 12;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.article-aside-left {
+  grid-column: 2 / 4;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.big-pic {
+  grid-column: 2 / -2;
+}
+
+.place-content  blockquote {
+  grid-column: 4 / 10;
+  margin: 8px 0 32px 0;
+  padding-left: 28px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 40px;
+  border-left: 2px solid #06A9B3;
+}
+
+.place-button {
+  grid-column: 5 / 8;
+  justify-self: start;
+  margin-top: 16px;
 }
 
 .footer {
