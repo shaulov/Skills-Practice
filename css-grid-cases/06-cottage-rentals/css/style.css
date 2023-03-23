@@ -615,3 +615,19 @@ body {
   grid-area: footer;
   background-color: #F2F8FB;
 }
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  min-height: 100px;
+}
+
+.footer-menu {
+  justify-self: center;
+}
+
+.copyright {
+  margin: 0;
+  justify-self: end;
+}
