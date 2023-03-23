@@ -59,6 +59,12 @@ body {
   color: #06A9B3;
 }
 
+.section-centered-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section h2::before {
   counter-increment: section-counter;
   content: "0" counter(section-counter);
@@ -375,6 +381,100 @@ body {
   grid-column: 5 / 8;
   justify-self: start;
   margin-top: 16px;
+}
+
+.catalog {
+  padding: 100px 0 140px 0;
+  background-color: #F2F8FB;
+}
+
+.catalog header {
+  margin-bottom: 40px;
+}
+
+.catalog-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.card-item {
+  grid-column: span 3;
+  display: grid;
+  grid-template-areas:
+    "img"
+    "content";
+  grid-template-columns: 3fr;
+  grid-template-rows: 220px auto;
+  row-gap: 16px;
+  background-color: #FFFFFF;
+}
+
+.card-horizontal {
+  grid-column: 3 / -3;
+  grid-template-areas: 
+    "img content";
+  grid-template-columns: 327px auto;
+  grid-template-rows: auto;
+  gap: 0;
+}
+
+.card-content {
+  grid-area: content;
+  padding: 0 24px 24px;
+}
+
+.card-horizontal .card-content {
+  padding: 20px 24px 24px;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.card-text {
+  margin: 0;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.3;
+}
+
+.card-pic {
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-list {
+  grid-area: list;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  margin: 0;
+  padding-top: 16px;
+  border-top: 2px solid #EAF2F6;
+}
+
+.card-horizontal .card-list {
+  column-gap: 179px;
+}
+
+.card-list dd {
+  grid-row: 1 / 2;
+  margin: 0;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.card-list dt {
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .footer {
