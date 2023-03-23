@@ -196,31 +196,45 @@
         </div>
       </div>
     </section>
-    <section class="feedback container">
+    <section class="section feedback container">
       <header>
         <h2>Оставить заявку</h2>
         <h3>Мы свяжемся с вами</h3>
       </header>
       <form class="feedback-form" method="get" action="#">
-        <label for="titles">Обращение</label>
-        <select class="field" name="titles" id="titles">
-          <option value="Mrs">Мистер</option>
-          <option value="Mr">Миссис</option>
-          <option value="Ms">Мисс</option>
-        </select>
-        <label for="name">Имя</label>
-        <input class="field" type="text" name="name" id="name" placeholder="Джон">
-        <label for="surname">Фамилия</label>
-        <input class="field" type="text" name="surname" id="surname" placeholder="Смит">
-        <label for="email">E-mail</label>
-        <input class="field" type="email" name="email" id="email" placeholder="johnsmith@gmail.com">
-        <label for="tel">Телефон</label>
-        <input class="field" type="tel" name="tel" id="tel" placeholder="+7 999 999-99-99">
-        <input class="visually-hidden" type="checkbox" name="agreement" id="agreement">
-        <label for="agreement" class="text-label">Согласие на обработку персональных данных</label>
-        <input class="visually-hidden" type="checkbox" name="subscribe" id="subscribe" checked>
-        <label for="subscribe" class="text-label">Подписка на рассылку</label>
-        <button class="button" type="submit">Отправить</button>
+        <div class="titles">
+          <label for="titles">Обращение</label>
+          <select class="field" name="titles" id="titles">
+            <option value="Mrs">Мистер</option>
+            <option value="Mr">Миссис</option>
+            <option value="Ms">Мисс</option>
+          </select>
+        </div>
+        <div class="name">
+          <label for="name">Имя</label>
+          <input class="field" type="text" name="name" id="name" placeholder="Джон">
+        </div>
+        <div class="surname">
+          <label for="surname">Фамилия</label>
+          <input class="field" type="text" name="surname" id="surname" placeholder="Смит">
+        </div>
+        <div class="email">
+          <label for="email">E-mail</label>
+          <input class="field" type="email" name="email" id="email" placeholder="johnsmith@gmail.com">
+        </div>
+        <div class="phone">
+          <label for="tel">Телефон</label>
+          <input class="field" type="tel" name="tel" id="tel" placeholder="+7 999 999-99-99">
+        </div>
+        <div class="policy checkbox">
+          <input type="checkbox" name="agreement" id="agreement">
+          <label for="agreement" class="text-label">Согласие на обработку персональных данных</label>
+        </div>
+        <div class="subscribe checkbox">
+          <input type="checkbox" name="subscribe" id="subscribe" checked>
+          <label for="subscribe" class="text-label">Подписка на рассылку</label>
+        </div>
+        <button class="feedback-button button" type="submit">Отправить</button>
       </form>
       <img class="feedback-img" src="img/image-114.jpg" width="708" height="737" alt="Лодка на озере">
     </section>
