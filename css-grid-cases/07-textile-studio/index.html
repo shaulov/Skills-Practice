@@ -37,7 +37,7 @@
     <section class="promo">
       <h2 class="section-title">СОЗДАДИМ ЭМОЦИЮ ВАШЕГО ИНТЕРЬЕРА</h2>
       <p class="promo-text">Интерьерный текстиль по индивидуальным размерам с доставкой на дом </p>
-      <a class="promo-button" href="#">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+      <a class="button promo-button" href="#">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
       <img class="promo-img" src="img/img-39.jpg" width="573" height="520"
         alt="Круглый ковёр бежевого цвета с чёрной окантовкой, на нём лежат декоративные подушки: серая квадратная и белая круглая, также белый бесформенный коврик, рядом подвесной плетённый стул">
     </section>
@@ -170,6 +170,25 @@
     </section>
     <section class="contact-us">
       <h2 class="section-title">МЫ ВСЕГДА РАДЫ ОБЩЕНИЮ</h2>
+      <p class="contact-text">Оставьте свои контакты. Менеджер перезвонит
+        в удобное вам время и ответит на все вопросы.</p>
+      <form class="contact-form" action="#" method="POST">
+        <label class="visually-hidden" for="contact-form-name">Имя</label>
+        <input class="form-field" type="text" name="name" id="contact-form-name" placeholder="Ваше имя" required>
+        <label class="visually-hidden" for="contact-form-phone">Телефон</label>
+        <input class="form-field" type="tel" name="phone" id="contact-form-phone" placeholder="Введите телефон" required>
+        <label class="visually-hidden" for="contact-form-time">Выберите удобное время</label>
+        <select class="form-select" name="time" id="contact-form-time" required>
+          <option value="Удобное время">Удобное время</option>
+        </select>
+        <input class="checkbox" type="checkbox" name="agreement" id="agreement" required>
+        <label for="agreement">Согласие на обработку персональных данных</label>
+        <button class="button" type="submit">Оставить заявку</button>
+      </form>
+      <div class="contact-map-wrapper">
+        <img class="contact-map" src="img/map.jpg" width="474" height="734" alt="Карта">
+        <img class="contact-location" src="img/location-map.svg" width="40" height="40" alt="Отметка локации">
+      </div>
     </section>
   </main>
 </body>
