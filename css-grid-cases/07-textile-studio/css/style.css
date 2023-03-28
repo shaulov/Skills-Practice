@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  min-width: 1366px;
+  min-height: 100vh;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #695A59;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1166px;
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: [header] auto [main] 1fr;
+}
+
+.header {
+  grid-row-start: header;
+}
+
+.main {
+  grid-row-start: main;
+}
