@@ -177,26 +177,30 @@
         <img class="collections-img" src="img/img-46.jpg" width="537" height="240" alt="Декоративные подушки на кровати">
       </div>
     </section>
-    <section class="contact-us">
-      <h2 class="section-title">МЫ ВСЕГДА РАДЫ ОБЩЕНИЮ</h2>
-      <p class="contact-text">Оставьте свои контакты. Менеджер перезвонит
-        в удобное вам время и ответит на все вопросы.</p>
-      <form class="contact-form" action="#" method="POST">
-        <label class="visually-hidden" for="contact-form-name">Имя</label>
-        <input class="form-field" type="text" name="name" id="contact-form-name" placeholder="Ваше имя" required>
-        <label class="visually-hidden" for="contact-form-phone">Телефон</label>
-        <input class="form-field" type="tel" name="phone" id="contact-form-phone" placeholder="Введите телефон" required>
-        <label class="visually-hidden" for="contact-form-time">Выберите удобное время</label>
-        <select class="form-select" name="time" id="contact-form-time" required>
-          <option value="Удобное время">Удобное время</option>
-        </select>
-        <input class="checkbox" type="checkbox" name="agreement" id="agreement" required>
-        <label for="agreement">Согласие на обработку персональных данных</label>
-        <button class="button" type="submit">Оставить заявку</button>
-      </form>
-      <div class="contact-map-wrapper">
-        <img class="contact-map" src="img/map.jpg" width="474" height="734" alt="Карта">
-        <img class="contact-location" src="img/location-map.svg" width="40" height="40" alt="Отметка локации">
+    <section class="feedback">
+      <div class="container feedback-content">
+        <h2 class="section-title feedback-title">МЫ ВСЕГДА РАДЫ ОБЩЕНИЮ</h2>
+        <p class="feedback-text">Оставьте свои контакты. Менеджер перезвонит
+          в удобное вам время и ответит на все вопросы.</p>
+        <form class="feedback-form" action="#" method="POST">
+          <label class="visually-hidden" for="feedback-form-name">Имя</label>
+          <input class="form-field" type="text" name="name" id="feedback-form-name" placeholder="Ваше имя" required>
+          <label class="visually-hidden" for="feedback-form-phone">Телефон</label>
+          <input class="form-field" type="tel" name="phone" id="feedback-form-phone" placeholder="Введите телефон" required>
+          <label class="visually-hidden" for="feedback-form-time">Выберите удобное время</label>
+          <select class="form-select" name="time" id="feedback-form-time" required>
+            <option value="Удобное время">Удобное время</option>
+          </select>
+          <label class="feedback-label" for="agreement">
+            <input class="checkbox" type="checkbox" name="agreement" id="agreement" required>
+            <span>Согласие на обработку персональных данных</span>
+          </label>
+          <button class="button feedback-button" type="submit">Оставить заявку</button>
+        </form>
+        <div class="feedback-map-wrapper">
+          <img class="feedback-map" src="img/map.jpg" width="474" height="734" alt="Карта">
+          <img class="feedback-location" src="img/location-map.svg" width="40" height="40" alt="Отметка локации">
+        </div>
       </div>
     </section>
   </main>
