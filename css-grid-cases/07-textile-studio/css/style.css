@@ -120,6 +120,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom 80px;
+  margin-bottom: 80px;
 }
 
 .promo-content {
@@ -152,4 +153,78 @@ body {
 
 .promo-img {
   grid-area: 1 / 7 / 5 / -1;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 35px 20px;
+  padding: 0 0 120px;
+}
+
+.about-title {
+  grid-column: 2 / 8;
+  margin: 0;
+  padding: 40px 0 38px;
+}
+
+.about-text {
+  grid-column: 2 / 8;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #695A59;
+}
+
+.about-blockquote {
+  grid-column: 1 / -1;
+  margin: 5px 0 9px;
+  padding: 80px 99px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 48px;
+  color: #FFFFFF;
+  background-image: url("../img/bg-aside.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.about-figure {
+  margin: 0;
+}
+
+.about-figure-right {
+  grid-column: 9 / -2;
+  grid-row: 2 / 5;
+}
+
+.about-figure-right .about-figcaption {
+  margin-top: 8px;
+}
+
+.about-figure-wide {
+  grid-column: 2 / -2;
+  display: grid;
+  grid-template-columns: 672px auto;
+  column-gap: 20px;
+  align-items: end;
+  margin: 5px 0 9px;
+}
+
+.about-figure-wide .about-figcaption {
+  padding-left: 19px;
+  border-left: 1px solid #A78587;
+}
+
+.about-figcaption {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #695A59;
+}
+
+.about-figcaption a {
+  color: #9A8584;
 }
