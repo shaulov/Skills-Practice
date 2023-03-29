@@ -30,11 +30,12 @@ body {
 }
 
 .section-title {
+  margin: 0;
   max-width: 500px;
   font-family: 'Old Standard TT';
   font-weight: 400;
-  font-size: 46px;
-  line-height: 64px;
+  font-size: 42px;
+  line-height: 54px;
 }
 
 .button {
@@ -134,7 +135,8 @@ body {
 
 .promo-title {
   grid-area: 1 / 2 / 2 / 7;
-  margin: 0;
+  font-size: 46px;
+  line-height: 64px;
   color: #EEE9E6;
 }
 
@@ -165,7 +167,6 @@ body {
 
 .about-title {
   grid-column: 2 / 8;
-  margin: 0;
   padding: 40px 0 38px;
 }
 
@@ -239,7 +240,7 @@ body {
 
 .catalog-title {
   grid-area: 1 / 2 / 2 / 8;
-  margin: 0 0 44px;
+  margin-bottom: 44px;
   padding: 12px 0;
 }
 
@@ -349,7 +350,7 @@ body {
 
 .projects-title {
   grid-area: 1 / 2 / 2 / 8;
-  margin: 0 0 44px 0;
+  margin-bottom: 44px;
   padding: 12px 0;
 }
 
@@ -423,4 +424,71 @@ body {
 
 .slider-btn-prev {
   transform: rotate(180deg);
+}
+
+.mission {
+  background-color: #343235;
+  background-image: url("../img/bg-mission.png");
+  background-repeat: no-repeat;
+  background-size: 100% 320px;
+  background-position: center bottom 20px;
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
+  padding-top: 120px;
+}
+
+.mission-title {
+  grid-area: 1 / 8 / 2 / 12;
+  padding: 12px 0;
+  color: #EEE9E6;
+}
+
+.mission-text {
+  grid-column: 8 / -1;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #FBF3F0;
+}
+
+.video-wrapper {
+  grid-area: 1 / 1 / 5 / 7;
+  position: relative;
+  width: 573px;
+  height: 598px;
+}
+
+.video-play-button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 97px;
+  height: 97px;
+  margin: auto;
+  padding: 0;
+  background-color: #343235;
+  background-image: url("../img/play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mission-img {
+  grid-area: 4 / 7 / 6 / -1;
+  align-self: end;
+}
+
+.mission-img-small {
+  grid-area: 5 / 4 / 6 / 7;
 }
