@@ -10,7 +10,26 @@
 </head>
 <body class="page">
   <header class="page-header">
-    <nav class="header-nav"></nav>
+    <div class="header-content container">
+      <a class="logo" href="#">
+        <img class="logo-img" src="img/logo.svg" width="98" height="40" alt="Логотип «Green Screen»">
+      </a>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#">Сеансы</a>
+        </li>
+        <li>
+          <a>Кекс наносит ответный удар</a>
+        </li>
+      </ul>
+      <label for="cinema" class="visually-hidden">Выберите кинотеатр</label>
+      <select class="select-cinema" name="cinema" id="cinema">
+        <option value="">Кинотеатр «На Карповке»</option>
+      </select>
+    </div>
   </header>
   <nav class="page-nav"></nav>
   <main class="page-main">
