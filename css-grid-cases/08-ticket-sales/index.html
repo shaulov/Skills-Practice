@@ -56,18 +56,68 @@
   </nav>
   <main class="page-main">
     <h1 class="visually-hidden">Билеты на фильм «Кекс наносит ответный удар»</h1>
-    <section class="schedule">
-      <h2 class="visually-hidden">Расписание сеансов</h2>
+    <section class="choice-section container">
+      <h2 class="visually-hidden">Выбор даты, сеанса и места</h2>
+      <div class="calendar">
+        <ul class="calendar-slider">
+          <li class="calendar-item">
+            <time class="time" datetime="2020-09-22">22 сентября</time>
+            <p class="weekday">четверг</p>
+          </li>
+          <li class="calendar-item calendar-item-selected">
+            <time class="time" datetime="2020-09-23">23 сентября</time>
+            <p class="weekday">пятница</p>
+          </li>
+          <li class="calendar-item">
+            <time class="time" datetime="2020-09-24">24 сентября</time>
+            <p class="weekday">суббота</p>
+          </li>
+        </ul>
+        <button class="slider-btn slider-btn-prev" type="button">
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="slider-btn slider-btn-next" type="button">
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+      <div class="sessions-time">
+        <p class="sessions-time-title">2D:</p>
+        <ul class="sessions-time-list">
+          <li class="sessions-time-item">
+            <time>12:00 - 13:30</time>
+          </li>
+          <li class="sessions-time-item">
+            <time>16:30 - 18:00</time>
+          </li>
+          <li class="sessions-time-item sessions-time-item-selected">
+            <time>20:00 - 21:30</time>
+          </li>
+        </ul>
+      </div>
+      <div class="sessions-time">
+        <p class="sessions-time-title">3D:</p>
+        <ul class="sessions-time-list">
+          <li class="sessions-time-item">
+            <time>10:00 - 11:30</time>
+          </li>
+          <li class="sessions-time-item">
+            <time>23:00 - 00:30</time>
+          </li>
+        </ul>
+      </div>
+      <div class="screen">
+        <img class="screen-img" src="img/screen.svg" width="1180" height="60" alt="Экран в кинозале">
+        <p class="screen-text">Экран</p>
+      </div>
     </section>
-    <section class="places">
-      <h2 class="visually-hidden">Места</h2>
+    <section class="result">
+      <section class="tickets">
+        <h2 class="visually-hidden">Выбранные билеты</h2>
+      </section>
+      <section class="payment">
+        <h2 class="payment-title">Оплата</h2>
+      </section>
     </section>
-    <section class="ticket">
-      <h2 class="visually-hidden">Выбранные билеты</h2>
-    </section>
-    <article class="payment">
-      <h2 class="payment-title">Оплата</h2>
-    </article>
   </main>
 </body>
 </html>
