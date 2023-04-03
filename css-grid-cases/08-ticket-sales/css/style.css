@@ -1,0 +1,44 @@
+body {
+  min-width: 1920px;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+.container {
+  padding: 0 60px;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav main";
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.page-nav {
+  grid-area: nav
+}
+
+.page-main {
+  grid-area: main;
+}
