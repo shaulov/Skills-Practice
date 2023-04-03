@@ -173,12 +173,55 @@
       </ul>
     </section>
     <section class="result">
-      <section class="tickets">
-        <h2 class="visually-hidden">Выбранные билеты</h2>
-      </section>
-      <section class="payment">
-        <h2 class="payment-title">Оплата</h2>
-      </section>
+      <h2 class="visually-hidden">Оплата выбранных билетов</h2>
+      <div class="tickets-container">
+        <section class="ticket">
+          <header class="ticket-header">
+            <h3>Билеты</h3>
+            <span>× 2</span>
+          </header>
+          <dl class="ticket-params-list">
+            <dt>Фильм:</dt>
+            <dd>Кекс наносит ответный удар</dd>
+            <dt>Дата:</dt>
+            <dd>23 сентября</dd>
+            <dt>Время:</dt>
+            <dd>20:00</dd>
+            <dt>Ряд:</dt>
+            <dd>2</dd>
+            <dt>Места:</dt>
+            <dd>4, 5</dd>
+          </dl>
+          <div class="bacrcode">
+            <img src="img/bar-code.svg" width="180" height="26" alt="">
+          </div>
+        </section>
+      </div>
+      <div class="payment-container">
+        <section class="payment">
+          <h3 class="payment-title">Оплата</h3>
+          <div class="card">
+            <div class="card-logo">
+              <img src="img/card-logo.svg" width="35" height="18" alt="Логотип карты SuperCard">
+              <p class="card-logo-type">SuperCard</p>
+            </div>
+            <div class="card-number">
+              <span>1234</span>
+              <span>5678</span>
+              <span>9012</span>
+              <span>3456</span>
+            </div>
+            <div class="card-info">
+              <span class="card-name">Opoznanniy Enot</span>
+              <span class="card-validity-day">20/99</span>
+            </div>
+          </div>
+          <button class="payment-add-button" type="button">
+            <span class="visually-hiddden">Добавить карту</span>
+          </button>
+          <button class="result-button" type="button">Оплатить 800 ₽</button>
+        </section>
+      </div>
     </section>
   </main>
 </body>
