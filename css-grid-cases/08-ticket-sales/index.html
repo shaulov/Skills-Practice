@@ -58,57 +58,119 @@
     <h1 class="visually-hidden">Билеты на фильм «Кекс наносит ответный удар»</h1>
     <section class="choice-section container">
       <h2 class="visually-hidden">Выбор даты, сеанса и места</h2>
-      <div class="calendar">
-        <ul class="calendar-slider">
-          <li class="calendar-item">
+      <ul class="calendar-list">
+        <li class="calendar-item">
+          <button class="calendar-item-button" type="button">
             <time class="time" datetime="2020-09-22">22 сентября</time>
             <p class="weekday">четверг</p>
-          </li>
-          <li class="calendar-item calendar-item-selected">
+          </button>
+        </li>
+        <li class="calendar-item">
+          <button class="calendar-item-button calendar-item-button-selected" type="button">
             <time class="time" datetime="2020-09-23">23 сентября</time>
             <p class="weekday">пятница</p>
-          </li>
-          <li class="calendar-item">
+          </button>
+        </li>
+        <li class="calendar-item">
+          <button class="calendar-item-button" type="button">
             <time class="time" datetime="2020-09-24">24 сентября</time>
             <p class="weekday">суббота</p>
-          </li>
-        </ul>
-        <button class="slider-btn slider-btn-prev" type="button">
-          <span class="visually-hidden">Назад</span>
-        </button>
-        <button class="slider-btn slider-btn-next" type="button">
-          <span class="visually-hidden">Вперёд</span>
-        </button>
-      </div>
-      <div class="sessions-time">
-        <p class="sessions-time-title">2D:</p>
-        <ul class="sessions-time-list">
-          <li class="sessions-time-item">
+          </button>
+        </li>
+      </ul>
+      <button class="calendar-btn calendar-btn-prev" type="button">
+        <span class="visually-hidden">Назад</span>
+      </button>
+      <button class="calendar-btn calendar-btn-next" type="button">
+        <span class="visually-hidden">Вперёд</span>
+      </button>
+      <p class="time-label time-label-row-1">2D:</p>
+      <ul class="time-list time-list-row-1">
+        <li class="time-item">
+          <button class="time-item-button" type="button">
             <time>12:00 - 13:30</time>
-          </li>
-          <li class="sessions-time-item">
+          </buttn >
+        </li>
+        <li class="time-item">
+          <button class="time-item-button" type="button">
             <time>16:30 - 18:00</time>
-          </li>
-          <li class="sessions-time-item sessions-time-item-selected">
+          </button>
+        </li>
+        <li class="time-item">
+          <button class="time-item-button time-item-button-selected" type="button">
             <time>20:00 - 21:30</time>
-          </li>
-        </ul>
-      </div>
-      <div class="sessions-time">
-        <p class="sessions-time-title">3D:</p>
-        <ul class="sessions-time-list">
-          <li class="sessions-time-item">
+          </button>
+        </li>
+      </ul>
+      <p class="time-label time-label-row-2">3D:</p>
+      <ul class="time-list time-list-row-2">
+        <li class="time-item">
+          <button class="time-item-button" type="button">
             <time>10:00 - 11:30</time>
-          </li>
-          <li class="sessions-time-item">
+          </button>
+        </li>
+        <li class="time-item">
+          <button class="time-item-button" type="button">
             <time>23:00 - 00:30</time>
-          </li>
-        </ul>
-      </div>
+          </button>
+        </li>
+      </ul>
       <div class="screen">
-        <img class="screen-img" src="img/screen.svg" width="1180" height="60" alt="Экран в кинозале">
         <p class="screen-text">Экран</p>
       </div>
+      <p class="seat-label seat-label-row-1">Ряд 1</p>
+      <ul class="seat-list seat-list-row-1">
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">1</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">2</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button">3</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">4</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">5</button>
+        </li>
+      </ul>
+      <p class="seat-label seat-label-row-2">Ряд 2</p>
+      <ul class="seat-list seat-list-row-2">
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">1</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button">2</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">3</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-selected">4</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-selected">5</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button">6</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">7</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button">8</button>
+        </li>
+        <li class="seat-item">
+          <button class="seat-item-button seat-item-button-occupied">9</button>
+        </li>
+      </ul>
+      <ul class="seat-param-list">
+        <li class="seat-param seat-param-occupied">Место занято</li>
+        <li class="seat-param seat-param-free">Место свободно</li>
+        <li class="seat-param seat-param-selected">Выбранное место</li>
+      </ul>
     </section>
     <section class="result">
       <section class="tickets">
