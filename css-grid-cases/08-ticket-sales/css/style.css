@@ -26,6 +26,7 @@ body {
 
 .page {
   display: grid;
+  grid-template-columns: 260px 1fr;
   grid-template-areas: 
     "header header"
     "nav main";
@@ -110,7 +111,91 @@ body {
 }
 
 .page-nav {
-  grid-area: nav
+  grid-area: nav;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 20px 0 50px 30px;
+  background-color: #5957DB;
+}
+
+.page-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-menu-link {
+  display: block;
+  padding: 20px 0 20px 60px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: 18px 22px;
+  background-position: center left 30px;
+}
+
+.page-menu-link-active {
+  color: #5957DB;
+  background-color: #ECF2FF;
+  border-radius: 50px 0 0 50px;
+  fill: #5957DB;
+}
+
+.page-menu-link-seance {
+  background-image: url("../img/seance-pic.svg");
+}
+
+.page-menu-link-trailers {
+  background-image: url("../img/trealer-pic.svg");
+}
+
+.page-menu-link-news {
+  background-image: url("../img/news-pic.svg");
+}
+
+.page-menu-link-about {
+  background-image: url("../img/about-pic.svg");
+}
+
+.page-menu-link-contacts {
+  background-image: url("../img/contacts-pic.svg");
+}
+
+.account {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px auto;
+  column-gap: 12px;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.account-avatar {
+  border-radius: 50%;
+}
+
+.account-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.account-link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
 }
 
 .page-main {
