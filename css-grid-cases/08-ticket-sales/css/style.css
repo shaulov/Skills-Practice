@@ -33,6 +33,80 @@ body {
 
 .page-header {
   grid-area: header;
+  background-color: #ECF2FF;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 100px;
+  align-items: center;
+  min-height: 80px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  margin-right: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5957DB;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+  color: #666666;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "\203A";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #5957DB;
+}
+
+.breadcrumbs-item-link {
+  padding: 10px 20px 10px 0;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.select-cinema {
+  padding: 14px 50px 14px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #5957DB;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  appearance: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  content: "\203A";
+  transform: rotate(90deg);
+  font-size: 16px;
+  line-height: 20px;
+  color: #5957DB;
 }
 
 .page-nav {
