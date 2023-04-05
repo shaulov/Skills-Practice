@@ -1,5 +1,4 @@
 body {
-  min-width: 1920px;
   min-height: 100vh;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -21,12 +20,15 @@ body {
 }
 
 .container {
+  max-width: 1920px;
+  margin: 0 auto;
   padding: 0 60px;
 }
 
 .page {
   display: grid;
   grid-template-columns: 260px 1fr;
+  grid-template-rows: 80px 1fr;
   grid-template-areas: 
     "header header"
     "nav main";
@@ -200,4 +202,85 @@ body {
 
 .page-main {
   grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+}
+
+.choice-section {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 160px repeat(2, 100px) 140px repeat(2, 110px) 60px;
+  column-gap: 30px;
+  margin: 60px 0;
+}
+
+.calendar-list {
+  grid-area: 1 / 2 / 2 / -2;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.calendar-item {
+  width: 300px;
+  margin-right: 30px;
+}
+
+.calendar-item:last-child {
+  margin-right: 0;
+}
+
+.calendar-item-button {
+  width: 100%;
+  height: 120px;
+  padding: 30px;
+  color: #5957DB;
+  text-align: center;
+  background-color: #ECF2FF;
+  border: none;
+  border-radius: 8px;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.weekday {
+  margin: 10px 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.calendar-item-button-selected {
+  color: #FFFFFF;
+  background: #43D000;
+  box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+}
+
+.calendar-btn {
+  justify-self: center;
+  width: 80px;
+  height: 120px;
+  background-color: #ECF2FF;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+  background-position: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.calendar-btn-prev {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.calendar-btn-next {
+  grid-area: 1 / -2 / 2 / -1;
+  transform: rotate(180deg);
 }
