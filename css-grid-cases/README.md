@@ -9,3 +9,4 @@
 05. Language school student's personal account (middle level) \[[link](05-language-school/)\]
 06. Landing page of a company that rents out country houses (middle level ) \[[link](06-cottage-rentals/)\]
 07. Landing page of the design textile studio (middle level) \[[link](07-textile-studio/)\]
+08. Application page for the sale of movie tickets (middle level) \[[link](08-ticket-sales/)\]
