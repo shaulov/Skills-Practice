@@ -513,6 +513,7 @@ body {
 }
 
 .ticket-params-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 20px;
@@ -521,6 +522,30 @@ body {
   font-size: 12px;
   line-height: 14px;
   border-bottom: 2px dashed #ECF2FF;
+}
+
+.ticket-params-list::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #5957DB;
+  border-radius: 50%;
+}
+
+.ticket-params-list::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #5957DB;
+  border-radius: 50%;
 }
 
 .ticket-params-list dt {
