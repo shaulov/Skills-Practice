@@ -39,6 +39,7 @@ body {
   grid-template-rows: 60px 1fr auto;
   row-gap: 48px;
   background-color: #FFFFFF;
+  box-shadow: 0px 5px 30px rgba(29, 29, 32, 0.07);
   border-radius: 10px
 }
 
@@ -106,6 +107,69 @@ body {
 
 .page-main {
   grid-area: 1 / 2 / -2 / -1;
+}
+
+.slider {
+  position: relative;
+  max-height: 344px;
+}
+
+.slider-img {
+  box-shadow: 0px 5px 30px rgba(29, 29, 32, 0.07);
+  border-radius: 10px;
+}
+
+.slider-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  max-width: 450px;
+  max-height: 132px;
+  margin: auto;
+}
+
+.slider-headline {
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 130%;
+}
+
+.slider-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-controls-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.slider-controls-button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: #E8E8EB;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-button-active {
+  background-color: #31B768;
 }
 
 .page-promo {
