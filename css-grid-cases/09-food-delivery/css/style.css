@@ -172,6 +172,121 @@ body {
   background-color: #31B768;
 }
 
+.settings {
+  margin: 40px 0 0;
+}
+
+.sort-and-search {
+  display: grid;
+  grid-template-columns: max-content 1fr auto;
+  column-gap: 20px;
+}
+
+.sort-and-search h3 {
+  align-self: start;
+  margin: 15px 0 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sort-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sort-item {
+  margin-bottom: 14px;
+}
+
+.sort-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.sport-item-button {
+  padding: 12px 20px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid #31B768;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sport-item-button:hover {
+  color: #FFFFFF;
+  background-color: #31B768;
+}
+
+.hashtag {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 20px;
+}
+
+.hashtag h3 {
+  align-self: start;
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hashtag-item {
+  margin-bottom: 14px;
+}
+
+.hashtag-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.hashtag-item-button {
+  padding: 10px 15px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: inherit;
+  background-color: transparent;
+  border: 1px solid #31B768;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hashtag-item-button:hover {
+  color: #FFFFFF;
+  background-color: #31B768;
+}
+
+.search-field {
+  width: 252px;
+  padding: 12px 30px 12px 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: transparent;
+  border: 1px solid #31B768;
+  border-radius: 5px;
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  background-size: 14px;
+}
+
 .page-promo {
   grid-row: 2 / -2;
 }
