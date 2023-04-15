@@ -33,6 +33,7 @@ body {
   background-color: #31B768;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .page {
@@ -302,6 +303,7 @@ body {
   grid-template-columns: repeat(4, minmax(120px, 1fr));
   gap: 40px 30px;
   grid-auto-flow: dense;
+  margin: 20px 0 50px;
 }
 
 .catalog-item-medium {
@@ -438,6 +440,109 @@ body {
 
 .page-promo {
   grid-row: 2 / -2;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(152px, max-content));
+  row-gap: 40px;
+}
+
+.promo-item {
+  grid-row: span 2;
+  display: grid;
+  position: relative;
+  max-width: 252px;
+  min-height: 152px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 5px 30px rgba(29, 29, 32, 0.07);
+  border-radius: 10px;
+}
+
+.promo-item-small {
+  grid-row: span 1;
+  display: block;
+  text-align: start;
+  background-color: initial;
+}
+
+.promo-item-big {
+  grid-row: span 3;
+}
+
+.promo-img {
+  grid-row-start: 1;
+  border-radius: 10px 10px 0 0;
+}
+
+.promo-item-small .promo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.promo-title {
+  max-width: 80%;
+  margin: 15px auto 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.promo-item-small .promo-title {
+  max-width: 111px;
+  margin: 10px 10px;
+}
+
+.promo-text {
+  margin: 0;
+  padding: 0 20px;
+}
+
+.promo-item-small .promo-text {
+  padding: 0 10px;
+}
+
+.promo-link {
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #31b768;
+}
+
+.promo-item-small .promo-link {
+  display: block;
+  margin-top: 50px;
+  padding: 0 10px;
+}
+
+.subscribe-form {
+  padding: 0 20px;
+}
+
+.subscribe-form-field {
+  width: 100%;
+  margin: 25px 0 15px;
+  padding: 12px 50px 12px 12px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  border: 1px solid rgba(1, 23, 10, 0.2);
+  border-radius: 5px;
+}
+
+.subscribe-form-button {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 5px;
 }
 
 .page-footer {
