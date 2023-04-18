@@ -1,4 +1,4 @@
-# grid-case9-food-delivery
-CSS Grid layout practice. Case 9
+# grid-case10-masonry
+CSS Grid layout practice. Case 10
 
-[Mockup of index.html](https://www.figma.com/file/YLxnQAU15jCCpPAD0t7nuN/AllFood?node-id=0-1&t=nHzHSvpGCRNi523l-0)
+[Mockup of index.html](https://www.figma.com/file/DeiBQL31Lsp9sT2FDlb1Vk/m-mind?node-id=148-2&t=X3Jk3M0EIliDwPD0-0)
