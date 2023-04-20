@@ -10,7 +10,32 @@
 </head>
 <body>
   <header class="header">
-    <nav class="header-nav conrainer"></nav>
+    <nav class="header-nav conrainer">
+      <a class="logo">
+        <img class="logo-img" src="img/logo.svg" width="131" height="28" alt="Логотип M.Mind">
+      </a>
+      <form class="search" action="#" method="GET">
+        <label class="visually-hidden" for="search">Поиск</label>
+        <input class="search-field" type="search" name="search" id="search" placeholder="Поиск">
+      </form>
+      <ul class="user-menu">
+        <li class="user-menu-item">
+          <a class="user-item-link user-item-link-favorite" href="#">
+            <span class="visually-hidden">Избранное</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a class="user-item-link user-item-link-notification" href="#">
+            <span class="visually-hidden">Уведомления</span>
+          </a>
+        </li>
+        <li class="user-menu-item">
+          <a class="user-item-link user-item-link-account" href="#">
+            <span class="visually-hidden">Мой аккаунт</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main class="main">
     <h1 class="visually-hidden">Галерея фотографий M.Mind</h1>
