@@ -1,0 +1,111 @@
+body {
+  display: grid;
+  grid-template-rows: [header] auto [main] 1fr [footer] auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 30px 20px;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0C0C0D;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  grid-row-start: header;
+}
+
+.header-nav {
+  display: grid;
+  grid-template-columns: 131px 1fr auto;
+  column-gap: 20px;
+  align-items: center;
+  min-height: 40px;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.search {
+  justify-self: center;
+}
+
+.search-field {
+  width: 500px;
+  padding: 10px 20px 10px 44px;
+  font-family: inherit;
+  background-color: transparent;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+  background-size: 14px 14px;
+  border: 1px solid #0C0C0D;
+  border-radius: 30px;
+}
+
+.user-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  column-gap: 15px;
+  justify-self: end;
+  max-width: 100%;
+  min-width: 150px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-item-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 10px 14px;
+  background-position: center;
+  border: 1px solid #0C0C0D;
+  border-radius: 50%;
+}
+
+.user-item-link-favorite {
+  background-image: url("../img/bookmark.svg");
+}
+
+.user-item-link-notification {
+  background-image: url("../img/notification.svg");
+}
+
+.user-item-link-account {
+  background-image: url("../img/user.jpg");
+  background-size: contain;
+}
+
+.main {
+  grid-row-start: main;
+}
+
+.footer {
+  grid-row-start: footer;
+}
