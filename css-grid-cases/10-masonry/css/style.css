@@ -43,8 +43,6 @@ body {
 }
 
 .logo-img {
-  width: 100%;
-  height: auto;
   vertical-align: middle;
 }
 
@@ -146,4 +144,25 @@ body {
 
 .footer {
   grid-row-start: footer;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-rows: 28px auto;
+  row-gap: 24px;
+  justify-content: center;
+  min-height: 100px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(12, 12, 13, 0.1);
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
 }
