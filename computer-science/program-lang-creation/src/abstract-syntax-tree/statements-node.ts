@@ -1,9 +1,9 @@
-import ExpressionNode from "./expression-node";
+import ExpressionNode from './expression-node';
 
 export default class StatementsNode extends ExpressionNode {
-  codeStrings: ExpressionNode[] = [];
+	codeStrings: ExpressionNode[] = [];
 
-  addNode(node: ExpressionNode) {
-    this.codeStrings.push(node);
-  }
-} 
+	addNode(node: ExpressionNode) {
+		this.codeStrings.push(node);
+	}
+}

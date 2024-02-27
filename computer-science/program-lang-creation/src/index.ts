@@ -1,5 +1,5 @@
-import Lexer from "./lexer";
-import Parser from "./parser";
+import Lexer from './lexer';
+import Parser from './parser';
 
 const code = `
   сумма РАВНО 5 УМНОЖИТЬ 9;

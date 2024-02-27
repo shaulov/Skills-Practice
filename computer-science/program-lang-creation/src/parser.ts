@@ -1,147 +1,167 @@
-import Token from "./token";
-import TokenType, { tokenTypesList } from "./token-type";
-import ExpressionNode from "./abstract-syntax-tree/expression-node";
-import StatementsNode from "./abstract-syntax-tree/statements-node";
-import NumberNode from "./abstract-syntax-tree/number-node";
-import VariableNode from "./abstract-syntax-tree/variable-node";
-import BinaryOperationNode from "./abstract-syntax-tree/binary-operation-node";
-import UnaryOperationNode from "./abstract-syntax-tree/unary-operation-node";
+import Token from './token';
+import TokenType, { tokenTypesList } from './token-type';
+import ExpressionNode from './abstract-syntax-tree/expression-node';
+import StatementsNode from './abstract-syntax-tree/statements-node';
+import NumberNode from './abstract-syntax-tree/number-node';
+import VariableNode from './abstract-syntax-tree/variable-node';
+import BinaryOperationNode from './abstract-syntax-tree/binary-operation-node';
+import UnaryOperationNode from './abstract-syntax-tree/unary-operation-node';
 
 export default class Parser {
-  tokens: Token[];
-  pos: number = 0;
-  scope: Record<string, unknown> = {};
+	tokens: Token[];
+	pos: number = 0;
+	scope: Record<string, unknown> = {};
 
-  constructor(tokens: Token[]) {
-    this.tokens = tokens;
-  }
+	constructor(tokens: Token[]) {
+		this.tokens = tokens;
+	}
 
-  match(...expected: TokenType[]): Token | null {
-    if (this.pos < this.tokens.length) {
-      const currentToken = this.tokens[this.pos];
-      if (expected.find(type => type.name === currentToken.type.name)) {
-        this.pos += 1;
-        return currentToken;
-      }
-    }
-    return null;
-  }
+	match(...expected: TokenType[]): Token | null {
+		if (this.pos < this.tokens.length) {
+			const currentToken = this.tokens[this.pos];
+			if (expected.find((type) => type.name === currentToken.type.name)) {
+				this.pos += 1;
+				return currentToken;
+			}
+		}
+		return null;
+	}
 
-  requier(...expected: TokenType[]): Token {
-    const token = this.match(...expected);
-    if (!token) {
-      throw new Error(`На позиции ${this.pos} ожидается ${expected[0].name}`);
-    }
-    return token;
-  }
+	requier(...expected: TokenType[]): Token {
+		const token = this.match(...expected);
+		if (!token) {
+			throw new Error(`На позиции ${this.pos} ожидается ${expected[0].name}`);
+		}
+		return token;
+	}
 
-  parseVariableOrNumber(): ExpressionNode {
-    const number = this.match(tokenTypesList.NUMBER);
-    if (number !== null) {
-      return new NumberNode(number);
-    }
-    const variable = this.match(tokenTypesList.VARIABLE);
-    if (variable !== null) {
-      return new VariableNode(variable);
-    }
-    throw new Error(`Ожидается переменная или число на позиции ${this.pos}`);
-  }
+	parseVariableOrNumber(): ExpressionNode {
+		const number = this.match(tokenTypesList.NUMBER);
+		if (number !== null) {
+			return new NumberNode(number);
+		}
+		const variable = this.match(tokenTypesList.VARIABLE);
+		if (variable !== null) {
+			return new VariableNode(variable);
+		}
+		throw new Error(`Ожидается переменная или число на позиции ${this.pos}`);
+	}
 
-  parsePrint(): ExpressionNode {
-    const operatorLog = this.match(tokenTypesList.LOG);
-    if (operatorLog !== null) {
-      return new UnaryOperationNode(operatorLog, this.parseFormula());
-    }
-    throw new Error(`Ожидается унарный оператор КОНСОЛЬ на позиции ${this.pos}`);
-  }
+	parsePrint(): ExpressionNode {
+		const operatorLog = this.match(tokenTypesList.LOG);
+		if (operatorLog !== null) {
+			return new UnaryOperationNode(operatorLog, this.parseFormula());
+		}
+		throw new Error(
+			`Ожидается унарный оператор КОНСОЛЬ на позиции ${this.pos}`
+		);
+	}
 
-  parseParentheses(): ExpressionNode {
-    if (this.match(tokenTypesList.LPAR) !== null) {
-      const node = this.parseFormula();
-      this.requier(tokenTypesList.RPAR);
-      return node;
-    } else {
-      return this.parseVariableOrNumber();
-    }
-  }
+	parseParentheses(): ExpressionNode {
+		if (this.match(tokenTypesList.LPAR) !== null) {
+			const node = this.parseFormula();
+			this.requier(tokenTypesList.RPAR);
+			return node;
+		} else {
+			return this.parseVariableOrNumber();
+		}
+	}
 
-  parseFormula(): ExpressionNode {
-    let leftNode = this.parseParentheses();
-    let operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS, tokenTypesList.MULTIPLY, tokenTypesList.DIVIDE);
-    while (operator !== null) {
-      const rightNode = this.parseParentheses();
-      leftNode = new BinaryOperationNode(operator, leftNode, rightNode);
-      operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS, tokenTypesList.MULTIPLY, tokenTypesList.DIVIDE);
-    }
-    return leftNode;
-  }
-  
-  parseExpression(): ExpressionNode {
-    if (this.match(tokenTypesList.VARIABLE) === null) {
-      const printNode = this.parsePrint();
-      return printNode;
-    }
-    this.pos -= 1;
-    let variableNode = this.parseVariableOrNumber();
-    const assignOperator = this.match(tokenTypesList.ASSIGN);
-    if (assignOperator !== null) {
-      const rightFormulaNode = this.parseFormula();
-      const binaryNode = new BinaryOperationNode(assignOperator, variableNode, rightFormulaNode);
-      return binaryNode;
-    }
-    throw new Error(`После переменной ожидается оператор присвоения на позиции ${this.pos}`);
-  }
+	parseFormula(): ExpressionNode {
+		let leftNode = this.parseParentheses();
+		let operator = this.match(
+			tokenTypesList.MINUS,
+			tokenTypesList.PLUS,
+			tokenTypesList.MULTIPLY,
+			tokenTypesList.DIVIDE
+		);
+		while (operator !== null) {
+			const rightNode = this.parseParentheses();
+			leftNode = new BinaryOperationNode(operator, leftNode, rightNode);
+			operator = this.match(
+				tokenTypesList.MINUS,
+				tokenTypesList.PLUS,
+				tokenTypesList.MULTIPLY,
+				tokenTypesList.DIVIDE
+			);
+		}
+		return leftNode;
+	}
 
-  parseCode(): ExpressionNode {
-    const root = new StatementsNode();
-    while (this.pos < this.tokens.length) {
-      const codeStringNode = this.parseExpression();
-      this.requier(tokenTypesList.SEMICOLON);
-      root.addNode(codeStringNode);
-    }
-    return root;
-  }
+	parseExpression(): ExpressionNode {
+		if (this.match(tokenTypesList.VARIABLE) === null) {
+			const printNode = this.parsePrint();
+			return printNode;
+		}
+		this.pos -= 1;
+		let variableNode = this.parseVariableOrNumber();
+		const assignOperator = this.match(tokenTypesList.ASSIGN);
+		if (assignOperator !== null) {
+			const rightFormulaNode = this.parseFormula();
+			const binaryNode = new BinaryOperationNode(
+				assignOperator,
+				variableNode,
+				rightFormulaNode
+			);
+			return binaryNode;
+		}
+		throw new Error(
+			`После переменной ожидается оператор присвоения на позиции ${this.pos}`
+		);
+	}
 
-  run(node: ExpressionNode): any {
-    if (node instanceof NumberNode) {
-      return parseInt(node.number.text);
-    }
-    if (node instanceof UnaryOperationNode) {
-      switch (node.operator.type.name) {
-        case tokenTypesList.LOG.name:
-          console.log(this.run(node.operand));
-          return;
-      }
-    }
-    if (node instanceof BinaryOperationNode) {
-      switch (node.operator.type.name) {
-        case tokenTypesList.MINUS.name:
-          return this.run(node.leftNode) - this.run(node.rightNode);
-        case tokenTypesList.PLUS.name:
-          return this.run(node.leftNode) + this.run(node.rightNode);
-        case tokenTypesList.MULTIPLY.name:
-          return this.run(node.leftNode) * this.run(node.rightNode);
-        case tokenTypesList.DIVIDE.name:
-          return this.run(node.leftNode) / this.run(node.rightNode);
-        case tokenTypesList.ASSIGN.name:
-          const result = this.run(node.rightNode);
-          const variableNode = <VariableNode>node.leftNode;
-          this.scope[variableNode.variable.text] = result;
-          return result;
-      }
-    }
-    if (node instanceof VariableNode) {
-      if (this.scope[node.variable.text]) {
-        return this.scope[node.variable.text];
-      }
-      throw new Error(`Переменная с названием ${node.variable.text} не обнаружена`);
-    }
-    if (node instanceof StatementsNode) {
-      node.codeStrings.forEach(codeString => {
-        this.run(codeString);
-      });
-      return;
-    }
-    throw new Error(`Ошибка`);
-  }
+	parseCode(): ExpressionNode {
+		const root = new StatementsNode();
+		while (this.pos < this.tokens.length) {
+			const codeStringNode = this.parseExpression();
+			this.requier(tokenTypesList.SEMICOLON);
+			root.addNode(codeStringNode);
+		}
+		return root;
+	}
+
+	run(node: ExpressionNode): any {
+		if (node instanceof NumberNode) {
+			return parseInt(node.number.text);
+		}
+		if (node instanceof UnaryOperationNode) {
+			switch (node.operator.type.name) {
+				case tokenTypesList.LOG.name:
+					console.log(this.run(node.operand));
+					return;
+			}
+		}
+		if (node instanceof BinaryOperationNode) {
+			switch (node.operator.type.name) {
+				case tokenTypesList.MINUS.name:
+					return this.run(node.leftNode) - this.run(node.rightNode);
+				case tokenTypesList.PLUS.name:
+					return this.run(node.leftNode) + this.run(node.rightNode);
+				case tokenTypesList.MULTIPLY.name:
+					return this.run(node.leftNode) * this.run(node.rightNode);
+				case tokenTypesList.DIVIDE.name:
+					return this.run(node.leftNode) / this.run(node.rightNode);
+				case tokenTypesList.ASSIGN.name:
+					const result = this.run(node.rightNode);
+					const variableNode = <VariableNode>node.leftNode;
+					this.scope[variableNode.variable.text] = result;
+					return result;
+			}
+		}
+		if (node instanceof VariableNode) {
+			if (this.scope[node.variable.text]) {
+				return this.scope[node.variable.text];
+			}
+			throw new Error(
+				`Переменная с названием ${node.variable.text} не обнаружена`
+			);
+		}
+		if (node instanceof StatementsNode) {
+			node.codeStrings.forEach((codeString) => {
+				this.run(codeString);
+			});
+			return;
+		}
+		throw new Error(`Ошибка`);
+	}
 }
