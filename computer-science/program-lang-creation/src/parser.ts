@@ -1,5 +1,11 @@
 import Token from "./token";
-import TokenType from "./token-type";
+import TokenType, { tokenTypesList } from "./token-type";
+import ExpressionNode from "./abstract-syntax-tree/expression-node";
+import StatementsNode from "./abstract-syntax-tree/statements-node";
+import NumberNode from "./abstract-syntax-tree/number-node";
+import VariableNode from "./abstract-syntax-tree/variable-node";
+import BinaryOperationNode from "./abstract-syntax-tree/binary-operation-node";
+import UnaryOperationNode from "./abstract-syntax-tree/unary-operation-node";
 
 export default class Parser {
   tokens: Token[];
@@ -27,5 +33,72 @@ export default class Parser {
       throw new Error(`На позиции ${this.pos} ожидается ${expected[0].name}`);
     }
     return token;
-  } 
+  }
+
+  parseVariableOrNumber(): ExpressionNode {
+    const number = this.match(tokenTypesList.NUMBER);
+    if (number !== null) {
+      return new NumberNode(number);
+    }
+    const variable = this.match(tokenTypesList.VARIABLE);
+    if (variable !== null) {
+      return new VariableNode(variable);
+    }
+    throw new Error(`Ожидается переменная или число на позиции ${this.pos}`);
+  }
+
+  parsePrint(): ExpressionNode {
+    const operatorLog = this.match(tokenTypesList.LOG);
+    if (operatorLog !== null) {
+      return new UnaryOperationNode(operatorLog, this.parseFormula());
+    }
+    throw new Error(`Ожидается унарный оператор КОНСОЛЬ на позиции ${this.pos}`);
+  }
+
+  parseParentheses(): ExpressionNode {
+    if (this.match(tokenTypesList.LPAR) !== null) {
+      const node = this.parseFormula();
+      this.requier(tokenTypesList.RPAR);
+      return node;
+    } else {
+      return this.parseVariableOrNumber();
+    }
+  }
+
+  parseFormula(): ExpressionNode {
+    let leftNode = this.parseParentheses();
+    let operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS);
+    while (operator !== null) {
+      const rightNode = this.parseParentheses();
+      leftNode = new BinaryOperationNode(operator, leftNode, rightNode);
+      operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS);
+    }
+    return leftNode;
+  }
+  
+  parseExpression(): ExpressionNode {
+    if (this.match(tokenTypesList.VARIABLE) === null) {
+      const printNode = this.parsePrint();
+      return printNode;
+    }
+    this.pos -= 1;
+    let variableNode = this.parseVariableOrNumber();
+    const assignOperator = this.match(tokenTypesList.ASSIGN);
+    if (assignOperator !== null) {
+      const rightFormulaNode = this.parseFormula();
+      const binaryNode = new BinaryOperationNode(assignOperator, variableNode, rightFormulaNode);
+      return binaryNode;
+    }
+    throw new Error(`После переменной ожидается оператор присвоения на позиции ${this.pos}`);
+  }
+
+  parseCode(): ExpressionNode {
+    const root = new StatementsNode();
+    while (this.pos < this.tokens.length) {
+      const codeStringNode = this.parseExpression();
+      this.requier(tokenTypesList.SEMICOLON);
+      root.addNode(codeStringNode);
+    }
+    return root;
+  }
 }
