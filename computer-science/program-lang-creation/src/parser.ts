@@ -101,4 +101,43 @@ export default class Parser {
     }
     return root;
   }
+
+  run(node: ExpressionNode): any {
+    if (node instanceof NumberNode) {
+      return parseInt(node.number.text);
+    }
+    if (node instanceof UnaryOperationNode) {
+      switch (node.operator.type.name) {
+        case tokenTypesList.LOG.name:
+          console.log(node.operand);
+          return;
+      }
+    }
+    if (node instanceof BinaryOperationNode) {
+      switch (node.operator.type.name) {
+        case tokenTypesList.MINUS.name:
+          return this.run(node.leftNode) - this.run(node.rightNode);
+        case tokenTypesList.PLUS.name:
+          return this.run(node.leftNode) + this.run(node.rightNode);
+        case tokenTypesList.ASSIGN.name:
+          const result = this.run(node.rightNode);
+          const variableNode = <VariableNode>node.leftNode;
+          this.scope[variableNode.variable.text] = result;
+          return result;
+      }
+    }
+    if (node instanceof VariableNode) {
+      if (this.scope[node.variable.text]) {
+        return this.scope[node.variable.text];
+      }
+      throw new Error(`Переменная с названием ${node.variable.text} не обнаружена`);
+    }
+    if (node instanceof StatementsNode) {
+      node.codeStrings.forEach(codeString => {
+        this.run(codeString);
+      });
+      return;
+    }
+    throw new Error(`Ошибка`);
+  }
 }
