@@ -67,11 +67,11 @@ export default class Parser {
 
   parseFormula(): ExpressionNode {
     let leftNode = this.parseParentheses();
-    let operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS);
+    let operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS, tokenTypesList.MULTIPLY, tokenTypesList.DIVIDE);
     while (operator !== null) {
       const rightNode = this.parseParentheses();
       leftNode = new BinaryOperationNode(operator, leftNode, rightNode);
-      operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS);
+      operator = this.match(tokenTypesList.MINUS, tokenTypesList.PLUS, tokenTypesList.MULTIPLY, tokenTypesList.DIVIDE);
     }
     return leftNode;
   }
@@ -119,6 +119,10 @@ export default class Parser {
           return this.run(node.leftNode) - this.run(node.rightNode);
         case tokenTypesList.PLUS.name:
           return this.run(node.leftNode) + this.run(node.rightNode);
+        case tokenTypesList.MULTIPLY.name:
+          return this.run(node.leftNode) * this.run(node.rightNode);
+        case tokenTypesList.DIVIDE.name:
+          return this.run(node.leftNode) / this.run(node.rightNode);
         case tokenTypesList.ASSIGN.name:
           const result = this.run(node.rightNode);
           const variableNode = <VariableNode>node.leftNode;

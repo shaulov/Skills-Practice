@@ -2,11 +2,9 @@ import Lexer from "./lexer";
 import Parser from "./parser";
 
 const code = `
-  сумма РАВНО 5 МИНУС 9;
-  суммадва РАВНО 0 МИНУС 6;
+  сумма РАВНО 5 УМНОЖИТЬ 9;
   КОНСОЛЬ сумма;
-  КОНСОЛЬ суммадва;
-  КОНСОЛЬ сумма МИНУС суммадва;
+  КОНСОЛЬ 10 ДЕЛИТЬ 2;
 `;
 
 const lexer = new Lexer(code);
