@@ -109,7 +109,7 @@ export default class Parser {
     if (node instanceof UnaryOperationNode) {
       switch (node.operator.type.name) {
         case tokenTypesList.LOG.name:
-          console.log(node.operand);
+          console.log(this.run(node.operand));
           return;
       }
     }
