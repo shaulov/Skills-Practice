@@ -2,4 +2,5 @@
 ## All mockups and materials are taken from a mini-courses from [Разметка по БЭМ](https://htmlacademy.ru/levelup/animation-pack)
 
 ### Cases:
-01. [Transition](transition-case/)
+1. [Transition 1](transition-case-1)
+2. [Transition 2](transition-case-2)
