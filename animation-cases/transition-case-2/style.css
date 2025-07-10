@@ -38,6 +38,12 @@ body {
   border-radius: 10px;
 
   justify-self: center;
+
+  transition: background-color 0.5s ease, box-shadow 0.5s ease-out;
+}
+
+.shoes-card:hover {
+  transition: box-shadow 0.75s ease, background-color 0.75s ease;
 }
 
 .shoes-card__img {
@@ -98,6 +104,7 @@ body {
   border: none;
   border-radius: 100px;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease-out 0.1s;
 }
 
 .shoes-card__buy-btn:hover,
