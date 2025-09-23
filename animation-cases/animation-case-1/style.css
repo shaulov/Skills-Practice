@@ -56,10 +56,29 @@ body {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.2);
   white-space: nowrap;
+  overflow: hidden;
   
   margin: 0;
   position: absolute;
   z-index: 2;
+
+  animation-name: running-line;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count:  infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes running-line {
+  0% {
+    transform: translateX(75%);
+    transform-origin: left center;
+  }
+  100% {
+    transform: translateX(-75%);
+    transform-origin: right center;
+  }
 }
 
 .promo__box {
@@ -68,8 +87,24 @@ body {
 }
 
 .promo__img {
- max-width: 100%;
- display: block;
+  max-width: 100%;
+  display: block;
+  animation-name: jumping-appearance;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+@keyframes jumping-appearance {
+  0% {
+    transform: translateY(600px) rotateX(30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% -1400px;
+  }
 }
 
 .promo__badge {
@@ -77,6 +112,23 @@ body {
   z-index: 10;
   top: 10%;
   left: 60%;
+  opacity: 0;
+  animation-name: spinner;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
 }
 
 .header__title {
@@ -95,4 +147,88 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
+}
+
+.rating__item {
+  animation-duration: 5s;
+  animation-delay: 6s;
+  animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  animation-iteration-count: infinite;
+}
+
+.rating__item:nth-child(1) { animation-name: star-scale-1; }
+.rating__item:nth-child(2) { animation-name: star-scale-2; }
+.rating__item:nth-child(3) { animation-name: star-scale-3; }
+.rating__item:nth-child(4) { animation-name: star-scale-4; }
+.rating__item:nth-child(5) { animation-name: star-scale-5; }
+
+@keyframes star-scale-1 {
+  0% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 0;
+  }
+
+  10% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes star-scale-2 {
+  5% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 0;
+  }
+
+  15% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes star-scale-3 {
+  10% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes star-scale-4 {
+  15% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 0;
+  }
+
+  25% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
+}
+
+
+@keyframes star-scale-5 {
+  20% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 0;
+  }
+
+  30% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
 }
