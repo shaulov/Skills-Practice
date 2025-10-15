@@ -9,3 +9,4 @@
 5. [Transition 5](transition-case-5)
 6. [Transition 6](transition-case-6)
 7. [Animation 1](animation-case-1)
+8. [Animation 2](animation-case-2)
