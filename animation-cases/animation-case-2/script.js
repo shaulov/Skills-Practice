@@ -11,6 +11,8 @@ const tabs =  document.querySelector('.tabs');
 const tabLinks = tabs.querySelectorAll('.tabs__link');
 const tabContent = document.querySelector('.tab-content');
 const tabContentItems = tabContent.querySelectorAll('.tab-content__item');
+const faqList = document.querySelector('.faq__list');
+const faqItems = faqList.querySelectorAll('.faq__item');
 
 let counter = 0;
 slides[counter].classList.add('slider__item--current');
@@ -95,5 +97,17 @@ tabs.addEventListener('click', (evt) => {
         tabContentItems.forEach(item => item.classList.remove('tab-content__item--active'));
         current.classList.add('tabs__link--active');
         tabContent.querySelector(`#${currentId}`).classList.add('tab-content__item--active');
+    }
+});
+
+faqList.addEventListener('click', (evt) => {
+    const current = evt.target;
+    if (current.tagName === 'BUTTON') {
+        const parent = current.parentNode;
+        const desc = parent.querySelector('.faq__answer');
+        parent.classList.toggle('faq__item--open');
+        desc.style.maxHeight = parent.classList.contains('faq__item--open') ?
+            desc.scrollHeight + 'px' :
+            null;
     }
 });
