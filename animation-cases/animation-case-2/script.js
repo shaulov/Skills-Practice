@@ -12,7 +12,6 @@ const tabLinks = tabs.querySelectorAll('.tabs__link');
 const tabContent = document.querySelector('.tab-content');
 const tabContentItems = tabContent.querySelectorAll('.tab-content__item');
 const faqList = document.querySelector('.faq__list');
-const faqItems = faqList.querySelectorAll('.faq__item');
 
 let counter = 0;
 slides[counter].classList.add('slider__item--current');
@@ -35,6 +34,12 @@ const isLast = (counter) => {
 
 burgerBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
+
+    if (menu.classList.contains('menu--open')) {
+        document.body.setAttribute('style', 'overflow: hidden');
+    } else {
+        document.body.removeAttribute('style');
+    }
 });
 
 sliderPrevBtn.addEventListener('click', () => {

@@ -707,6 +707,5 @@ body {
 }
 
 .faq__answer * {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-block: 20px;
 }
