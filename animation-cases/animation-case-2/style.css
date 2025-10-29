@@ -491,6 +491,7 @@ body {
   border: none;
   position: relative;
   cursor: pointer;
+  transition: color 0.2s ease-out;
 }
 
 .tabs__link:hover {
@@ -551,9 +552,39 @@ body {
   align-items: flex-start;
 }
 
+.tab-content__item--active .tab-content__wrap {
+  animation: fade-left 0.5s ease-out 1;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .tab-content__img {
   max-width: 100%;
   display: block;
+}
+
+.tab-content__item--active .tab-content__img {
+  animation: fade-right 0.5s ease-out 1;
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .tab-content__date {

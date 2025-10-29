@@ -7,6 +7,10 @@ const modalCloseBtn = document.querySelector('.modal__close-btn');
 const slides = document.querySelectorAll('.slider__item');
 const sliderPrevBtn = document.querySelector('.slider__btn--prev');
 const sliderNextBtn = document.querySelector('.slider__btn--next');
+const tabs =  document.querySelector('.tabs');
+const tabLinks = tabs.querySelectorAll('.tabs__link');
+const tabContent = document.querySelector('.tab-content');
+const tabContentItems = tabContent.querySelectorAll('.tab-content__item');
 
 let counter = 0;
 slides[counter].classList.add('slider__item--current');
@@ -80,5 +84,16 @@ modalCloseBtn.addEventListener('click', handleCloseModal);
 document.addEventListener('keydown', (evt) => {
     if (evt.code === 'Escape') {
         handleCloseModal();
+    }
+});
+
+tabs.addEventListener('click', (evt) => {
+    const current = evt.target;
+    const currentId = current.dataset.work;
+    if (current.tagName === 'BUTTON') {
+        tabLinks.forEach(item => item.classList.remove('tabs__link--active'));
+        tabContentItems.forEach(item => item.classList.remove('tab-content__item--active'));
+        current.classList.add('tabs__link--active');
+        tabContent.querySelector(`#${currentId}`).classList.add('tab-content__item--active');
     }
 });
