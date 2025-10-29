@@ -345,16 +345,15 @@ body {
   bottom: 0;
   right: 0;
   z-index: 1000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  display: none;
 }
 
 .modal--open {
   pointer-events: auto;
-  display: block;
+  display: flex;
 }
 
 .modal__wrap {
@@ -365,6 +364,36 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background-color: #fff;
+}
+
+.modal-in {
+  animation: modal-in 0.5s ease-out 1;
+}
+
+.modal-out {
+  animation: modal-out 0.5s ease-in 1;
+}
+
+@keyframes modal-in {
+  from {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(150%);
+    opacity: 0;
+  }
 }
 
 .modal__title {
@@ -444,13 +473,12 @@ body {
 
 .tabs__links {
   padding-left: 0;
-  margin: 0;
+  margin: 0 0 40px;
   list-style-type: none;
   display: flex;
   align-items: flex-end;
   gap: 50px;
   border-bottom: 1px solid #b9b9b9;
-  margin-bottom: 40px;
 }
 
 .tabs__link {
