@@ -45,11 +45,25 @@ body {
 
 /* шапка */
 
-.header--fixed {
-  width: 1440px;
-  position: fixed;
+.header {
+  position: absolute;
+  width: 100%;
   top: 4px;
   z-index: 1000;
+}
+
+.header--fixed {
+  position: fixed;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .header__nav {
@@ -116,7 +130,15 @@ body {
   color: #2c2c2c;
   position: absolute;
   width: 1440px;
-  box-shadow: 0px 5px 17px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 5px 17px rgba(0, 0, 0, 0.06);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+}
+
+.header__backscrolled--shown {
+  transform: scaleY(1);
+  transition: transform 0.5s ease;
 }
 
 .backscroll-header {
@@ -126,8 +148,6 @@ body {
   gap: 20px;
   padding: 7px 110px;
 }
-
-
 
 .backscroll-header__text {
   font-weight: normal;
@@ -153,6 +173,7 @@ body {
   position: relative;
   height: 700px;
   overflow: hidden;
+  margin-top: 88px;
 }
 
 .slider__item {
