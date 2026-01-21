@@ -5,6 +5,8 @@ const maxScrollValue = document.body.scrollHeight - window.innerHeight - header.
 let scrollStarted = 0;
 const scrollHeaderStarted = 400;
 
+const contentBlocks = document.querySelectorAll('.content__block');
+
 const handleScroll = () => {
   const scrollTop = window.scrollY;
   const progressValue = scrollTop/ maxScrollValue;
@@ -28,3 +30,31 @@ const handleScroll = () => {
 };
 
 document.addEventListener('scroll', handleScroll);
+
+// Классический вриант с eventListener
+// const handleElementVisibility = (element) => {
+//     const rect = element.getBoundingClientRect();
+//     const halfHeight = rect.height / 2;
+//     const viewportHeight = window.innerHeight;
+//
+//     if (rect.top <= viewportHeight - halfHeight && rect.bottom >= halfHeight) {
+//         element.classList.add('content__block--shown');
+//     }
+// }
+// window.addEventListener('scroll', () => contentBlocks.forEach(handleElementVisibility));
+
+// Интересный вариант с обзёрвером, но работает не совсем так как надо
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('content__block--shown');
+
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.5 }
+);
+
+contentBlocks.forEach(el => observer.observe(el));

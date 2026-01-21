@@ -312,6 +312,14 @@ body {
   align-items: center;
   gap: 120px;
   margin-right: -110px;
+  opacity: 0.5;
+  transform: scaleX(1.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content__block--shown {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .content__block--inverted {
