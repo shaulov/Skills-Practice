@@ -62,21 +62,19 @@ const reviewsSection = document.querySelector('.reviews');
 const reviews = document.querySelector('.reviews-list');
 const clientWidth = reviewsSection.clientWidth;
 const scrollWidth = reviews.scrollWidth;
-const step = 150;
 let dist = 0;
+const step = 50;
 
 const handleWheel = (evt) => {
     evt.preventDefault();
-    console.log(scrollWidth + dist);
-    console.log(clientWidth - step * 2);
 
-    if (evt.deltaY > 0 && dist <= 0 && scrollWidth + dist > clientWidth - step * 2) {
+    if (evt.deltaY > 0 && dist <= 0 && scrollWidth + dist > clientWidth - step * 3) {
         dist = dist - step;
     } else if (dist < 0) {
         dist = dist + step;
     }
 
-    reviews.setAttribute('style', `transform: translateX(${dist}px);`);
+    reviews.setAttribute('style', `transform: translateX(${dist}px)`);
 };
 
 reviews.addEventListener('wheel', handleWheel);
