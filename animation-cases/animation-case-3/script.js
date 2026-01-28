@@ -5,8 +5,6 @@ const maxScrollValue = document.body.scrollHeight - window.innerHeight - header.
 let scrollStarted = 0;
 const scrollHeaderStarted = 400;
 
-const contentBlocks = document.querySelectorAll('.content__block');
-
 const handleScroll = () => {
   const scrollTop = window.scrollY;
   const progressValue = scrollTop/ maxScrollValue;
@@ -31,6 +29,7 @@ const handleScroll = () => {
 
 document.addEventListener('scroll', handleScroll);
 
+const contentBlocks = document.querySelectorAll('.content__block');
 // Классический вриант с eventListener
 // const handleElementVisibility = (element) => {
 //     const rect = element.getBoundingClientRect();
@@ -43,7 +42,7 @@ document.addEventListener('scroll', handleScroll);
 // }
 // window.addEventListener('scroll', () => contentBlocks.forEach(handleElementVisibility));
 
-// Интересный вариант с обзёрвером, но работает не совсем так как надо
+// Интересный вариант с обзёрвером
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
@@ -58,3 +57,26 @@ const observer = new IntersectionObserver(
 );
 
 contentBlocks.forEach(el => observer.observe(el));
+
+const reviewsSection = document.querySelector('.reviews');
+const reviews = document.querySelector('.reviews-list');
+const clientWidth = reviewsSection.clientWidth;
+const scrollWidth = reviews.scrollWidth;
+const step = 150;
+let dist = 0;
+
+const handleWheel = (evt) => {
+    evt.preventDefault();
+    console.log(scrollWidth + dist);
+    console.log(clientWidth - step * 2);
+
+    if (evt.deltaY > 0 && dist <= 0 && scrollWidth + dist > clientWidth - step * 2) {
+        dist = dist - step;
+    } else if (dist < 0) {
+        dist = dist + step;
+    }
+
+    reviews.setAttribute('style', `transform: translateX(${dist}px);`);
+};
+
+reviews.addEventListener('wheel', handleWheel);
