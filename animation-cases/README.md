@@ -11,3 +11,4 @@
 7. [Animation 1](animation-case-1)
 8. [Animation 2](animation-case-2)
 9. [Animation 3](animation-case-3)
+10. [Animation 4](animation-case-4)
